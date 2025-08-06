@@ -1,0 +1,501 @@
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content">
+      <h1>Bắt đầu với Mini App Center</h1>
+
+      <p class="description">
+        Hướng dẫn chi tiết quy trình phát triển Mini App trên hệ thống Mini App Center (MAC) của VNPT.
+      </p>
+
+      <section id="overview" class="section">
+        <h2>1.1. Tổng quan quy trình phát triển Mini App</h2>
+        <div class="image-container">
+          <img src="/assets/images/process-flow.png" alt="Quy trình phát triển Mini App">
+        </div>
+
+        <div class="table-container">
+          <table class="process-table">
+            <thead>
+              <tr>
+                <th>Bước</th>
+                <th>Mô tả</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Tạo Mini App</strong></td>
+                <td>
+                  <ol>
+                    <li>Đăng nhập tài khoản nhà phát triển đã đăng ký trên MAC</li>
+                    <li>Tại Danh sách App chọn Thêm ứng dụng và điền thông tin ứng dụng</li>
+                    <li>Tại Danh sách ứng dụng vừa tạo chọn Tạo Mini App</li>
+                  </ol>
+                  <p class="note-text">Bây giờ, bạn có thể truy cập vào MAC và tạo các Mini App của mình</p>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2. Xây dựng Mini App</strong></td>
+                <td>
+                  <ol>
+                    <li>Nhà phát triển tham khảo tài liệu hướng dẫn và công cụ do Super App cung cấp</li>
+                    <li>Nhà phát triển cấu hình các công cụ cần thiết theo thông tin được cung cấp</li>
+                    <li>Nhà phát triển tiến hành phát triển Mini App và export ra file theo định dạng được compile từ hệ thống Super App</li>
+                    <li>Chọn Mini App đã tạo ở bước 1 và chọn Quản lý phiên bản</li>
+                    <li>Tại màn hình Quản lý phiên bản chọn Tạo phiên bản mới</li>
+                    <li>Điền các thông tin cho phiên bản Mini App và upload các file vừa export lên hệ thống</li>
+                  </ol>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3. Kiểm duyệt Mini App</strong></td>
+                <td>
+                  <p>Tại phiên bản Mini App vừa tạo, chọn <strong>Gửi xét duyệt</strong>.</p>
+                  <p class="note-text">→ Sau khi gửi xét duyệt, bộ phận Tester sẽ kiểm duyệt MiniApp đáp ứng tiêu chuẩn quy định của hệ thống.</p>
+                  <p class="success-note">Nếu MiniApp đạt tiêu chuẩn chất lượng, Tester thực hiện phê duyệt sẵn sàng phát hành.</p>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4. Phát hành Mini App</strong></td>
+                <td>
+                  <p>Tại phiên bản đủ điều kiện và đã được hệ thống phê duyệt, chọn <strong>Xuất bản phiên bản này</strong>.</p>
+                  <p class="success-note">→ Mini App của bạn lúc này đã được xuất bản lên app Super App và bạn có thể trải nghiệm Mini App của mình trên ứng dụng này</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="review-process" class="section">
+        <h2>1.2. Tổng quan quy trình kiểm duyệt Mini App</h2>
+        <div class="note">
+          <p>N/A</p>
+        </div>
+      </section>
+
+      <section id="development-overview" class="section">
+        <h2>1.3. Tổng quan phát triển</h2>
+
+        <div class="subsection">
+          <h3>1.3.1. Chuẩn bị</h3>
+
+          <div class="info-item">
+            <h5>• Đăng ký tài khoản đối tác - nhà phát triển</h5>
+            <p>Truy cập vào hệ thống MAC <a href="https://mac.media.vn/overview/home-page" class="link-text" target="_blank">https://mac.media.vn/overview/home-page</a> đăng ký tài khoản nhà phát triển Mini App để sử dụng các dịch vụ do nền tảng Super App cung cấp</p>
+          </div>
+
+          <div class="info-item">
+            <h5>• Đăng nhập vào MAC</h5>
+            <p>Sử dụng tài khoản vừa đăng ký để đăng nhập vào MAC</p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>1.3.2. Thiết lập công cụ và môi trường phát triển</h3>
+
+          <div class="subsection">
+            <h4>1.3.2.1. Mini App Source Base</h4>
+            <p>Mini App Source Base là bộ khung cho việc phát triển các Mini App</p>
+
+            <div class="table-container">
+              <table class="structure-table">
+                <thead>
+                  <tr>
+                    <th>File/Folder</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>app.json</code></td>
+                    <td>File contains the Mini App configuration: AppId, BundleId, InputFile, Name App, Version</td>
+                  </tr>
+                  <tr>
+                    <td><code>babel.config.js</code></td>
+                    <td>File contains the Babel configuration</td>
+                  </tr>
+                  <tr>
+                    <td><code>index.js</code></td>
+                    <td>File contains root index script</td>
+                  </tr>
+                  <tr>
+                    <td><code>metro.config.js</code></td>
+                    <td>File contains the metro configuration</td>
+                  </tr>
+                  <tr>
+                    <td><code>package.json</code></td>
+                    <td>File contains npm packages used in the Mini App and Script CLI for development.</td>
+                  </tr>
+                  <tr>
+                    <td><code>webpack.config.mjs</code></td>
+                    <td>File contains Webpack config</td>
+                  </tr>
+                  <tr>
+                    <td><code>src</code></td>
+                    <td>Folder contains Mini App screens</td>
+                  </tr>
+                  <tr>
+                    <td><code>com_miniapp_myapp_1_0_0.tsx</code></td>
+                    <td>File contains start point of Mini App.</td>
+                  </tr>
+                  <tr>
+                    <td><code>dependencies.mjs</code></td>
+                    <td>File chứa các thư viện mà Host App đang hỗ trợ, có yêu cầu version tương ứng. Mini app muốn chạy tốt trên môi trường Host App cần phải sử dụng đúng những version yêu cầu.</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets</code></td>
+                    <td>Folder contains Assets</td>
+                  </tr>
+                  <tr>
+                    <td><code>screens</code></td>
+                    <td>Folder contains Mini App screens</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>Hướng dẫn cấu hình trên mini app source base</h4>
+            <ul>
+              <li><strong>Download mini app source base:</strong> <a href="https://gitlab.com/software.media/_miniapp.git" class="link-text" target="_blank">https://gitlab.com/software.media/_miniapp.git</a></li>
+              <li><strong>Công cụ lập trình IDE:</strong> Develop có thể sử dụng 1 số IDE hỗ trợ lập trình ứng dụng trên platform React Native như: VSCode, Atom, …, tuy nhiên để dễ dàng cho việc support và tương thích môi trường nền tảng chúng tôi khuyến nghị dùng <a href="https://code.visualstudio.com/" class="link-text" target="_blank">VSCode</a>.</li>
+              <li><strong>Cấu hình BundleId:</strong> Vào file app.json để khai điền bundleId cho ứng dụng. BundleId này là để định danh cho 1 mini app. Được đăng ký trước trên MAC, và phải được đảm bảo là duy nhất và không đã được sử dụng với mini app khác.</li>
+              <li><strong>Cấu hình ModuleId:</strong> Vào file webpack.config.mjs thay thế moduleid định danh cho mini app. Hiện tại đang được đặt mặc định là com_miniapp_myapp_module. Hãy đổi lại theo syntax của bundleId. Ví dụ: bundleId (com.abc.news) → com_abc_news_module.</li>
+              <li><strong>Cấu hình InputFile:</strong> Đổi tên file com_miniapp_myapp_1_0_0.tsx mặc định thành tên input riêng của mini app theo cấu trúc của Bundle Id + Version. Thay các dấu "." băng dấu "_". Đồng thời khai báo InputFile vào trong App.json. Mỗi khi release version mới đều cần đổi lại tên file theo version mới của app. Vd: bundleId (com.abc.news) + version (1.0.1) → com_abc_news_1_0_1</li>
+            </ul>
+
+            <h4>Hướng dẫn xây dựng ứng dụng từ source base</h4>
+            <ul>
+              <li><strong>Chạy lệnh Yarn:</strong> Sau khi cài đặt xong môi trường, mở project bằng VSCode. Mở terminal ở bên dưới IDE và gõ lệnh Yarn để cài đặt các thư viện cần thiết. Nếu máy chưa đc cài đặt yarn thì có thể setup theo <a href="https://classic.yarnpkg.com/lang/en/docs/install/" class="link-text" target="_blank">hướng dẫn</a>.</li>
+              <li><strong>Các lệnh hỗ trợ đã được tích hợp sẵn trên source base:</strong>
+                <ul>
+                  <li><code>yarn start:</code> Lệnh khởi chạy node server cho ứng dụng react native.</li>
+                  <li><code>yarn run-ios:</code> Lệnh chạy trên simulator trên ios.</li>
+                  <li><code>yarn run-android:</code> Lệnh chạy trên android.</li>
+                  <li><code>yarn build:</code> Lệnh build bundle để up lên MAC.</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>Hướng dẫn build release Mini App</h4>
+            <p>Sau khi quá trình develop 1 mini app hoàn thành, nhà phát triển mong muốn build mini app để upload lên MAC. Thì cần thực hiện các bước sau:</p>
+            <ul>
+              <li>Vào thư mục build trong source base xoá các version build cũ.</li>
+              <li>Chạy lệnh yarn build để build source code. Sau khi chạy xong trong thư mục build sẽ hiện ra 4 file (như hình dưới). Trong thư mục build sẽ có các folder như ios, android, output. Tuy nhiên bạn chỉ cần chọn 4 file trong trong thư mục <span class="highlight-path">build/outputs/ios/remotes/</span> để upload lên MAC.</li>
+            </ul>
+
+            <div class="image-container">
+              <img src="/assets/images/build-release.png" alt="Hướng dẫn build release Mini App">
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h4>1.3.2.2. UI Component Kits</h4>
+            <p>Hệ thống UI Components, cung cấp bộ các thành phần UI cơ bản cần thiết cho một ứng dụng Mini App như: văn bản, nút, cửa sổ bật lên, màu, biểu tượng, khoảng cách,...</p>
+            <p>Các thành phần được tạo sẵn và thiết kế theo chuẩn mobile; hỗ trợ nhà phát triển rút ngắn thời gian phát triển ứng dụng, đảm bảo tính nhất quán của UI và tạo được giao diện thân thiện hơn với người dùng</p>
+
+            <h5>● Cài đặt</h5>
+            <p>chạy lệnh:</p>
+            <div class="code-block">
+              <code>yarn add -rn-component react-native-date-picker react-native-fast-image</code><br>
+              <code>&& cd ios pod install</code>
+            </div>
+
+            <h5>● Danh sách các Component hiện có</h5>
+            <p><strong>Box:</strong> Component giống View của React-Native hỗ trợ style thông qua props</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>extend ViewProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của View (VD: onLayout, style, hitSlop)</td>
+                  </tr>
+                  <tr>
+                    <td><code>padding</code></td>
+                    <td>NumberOrString hoặc NumberOrString[]</td>
+                    <td>
+                      khai báo padding cho Box<br>
+                      VD: <br>
+                      nếu muốn Box padding tất cả 10 : <code>padding=&#123;10&#125;</code><br>
+                      nếu muốn Box padding hai bên 10 ,trên dưới 20: <code>padding=&#123;[10, 20]&#125;</code><br>
+                      nếu muốn Box padding top 1, bottom 2, left 3, right 4: <code>padding=&#123;[1, 2,3,4]&#125;</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingHorizontal</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Horizontal</td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingVertical</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Vertical</td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingBottom</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Bottom</td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingTop</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Top</td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingLeft</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Left</td>
+                  </tr>
+                  <tr>
+                    <td><code>paddingRight</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box padding Right</td>
+                  </tr>
+                  <tr>
+                    <td><code>margin</code></td>
+                    <td>NumberOrString hoặc NumberOrString[]</td>
+                    <td>
+                      khai báo margin cho Box<br>
+                      VD: <br>
+                      nếu muốn Box margin tất cả 10 : <code>margin=&#123;10&#125;</code><br>
+                      nếu muốn Box margin hai bên 10 ,trên dưới 20: <code>margin=&#123;[10, 20]&#125;</code><br>
+                      nếu muốn Box margin top 1, bottom 2, left 3, right 4: <code>margin=&#123;[1, 2,3,4]&#125;</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>marginHorizontal</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box marginHorizontal</td>
+                  </tr>
+                  <tr>
+                    <td><code>marginVertical</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box marginVertical</td>
+                  </tr>
+                  <tr>
+                    <td><code>marginBottom</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box margin Bottom</td>
+                  </tr>
+                  <tr>
+                    <td><code>marginTop</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box margin Top</td>
+                  </tr>
+                  <tr>
+                    <td><code>marginLeft</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box margin Left</td>
+                  </tr>
+                  <tr>
+                    <td><code>marginRight</code></td>
+                    <td>number hoặc string</td>
+                    <td>Box margin Right</td>
+                  </tr>
+                  <tr>
+                    <td><code>flex</code></td>
+                    <td>number</td>
+                    <td>Box flex</td>
+                  </tr>
+                  <tr>
+                    <td><code>center</code></td>
+                    <td>boolean(default = false)</td>
+                    <td>style alignItems: center</td>
+                  </tr>
+                  <tr>
+                    <td><code>middle</code></td>
+                    <td>boolean(default = false)</td>
+                    <td>style justifyContent: center</td>
+                  </tr>
+                  <tr>
+                    <td><code>radius</code></td>
+                    <td>number</td>
+                    <td>borderRadius</td>
+                  </tr>
+                  <tr>
+                    <td><code>color</code></td>
+                    <td>string</td>
+                    <td>backgroundColor</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="image-container">
+              <img src="/assets/images/start-center_1.png" alt="Code">
+              <img src="/assets/images/ui-component-kit.png" alt="Loading">
+            </div>
+
+            <!-- Text -->
+            <p><strong>Text:</strong> Component giống Text của React-Native hỗ trợ style thông qua props</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>extend ViewProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của View (VD: onLayout, style, hitSlop)</td>
+                  </tr>
+                  <tr>
+                    <td><code>size(require)</code></td>
+                    <td>number</td>
+                    <td>text font size</td>
+                  </tr>
+                  <tr>
+                    <td><code>extend TextProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của Text(VD: onLayout, style,numberOfLine)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="image-container">
+              <img src="/assets/images/text-code.png" alt="Text">
+              <img src="/assets/images/text-ui.png" alt="Text">
+            </div>
+            <!-- End Text -->
+
+            <!-- Thumb -->
+            <p><strong>Thumb:</strong> Component hiển thị hình ảnh (hỗ trợ cache ảnh)</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>extend FastImageProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của FastImageProps (VD:source,onStartLoad)</td>
+                  </tr>
+                  <tr>
+                    <td><code>sourceFallack</code></td>
+                    <td>ImageSourcePropsType</td>
+                    <td>default source uri</td>
+                  </tr>
+                  <tr>
+                    <td><code>loadingColor</code></td>
+                    <td>string</td>
+                    <td>color của activity loading</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="image-container">
+              <img src="/assets/images/thumb-code.png" alt="Thumb">
+              <img src="/assets/images/thumb-UI.png" alt="Thumb">
+            </div>
+            <!-- End Thumb -->
+
+            <!-- TouchSingle -->
+            <p><strong>TouchSingle:</strong> Component Pressable (hỗ trợ debound cho hàm onPress tránh việc used spam nút bấm)</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>extend PressableProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của PressableProps(VD:onPress,onFocus,onBlur )</td>
+                  </tr>
+                  <tr>
+                    <td><code>delay</code></td>
+                    <td>number</td>
+                    <td>thời gian debound tính theo mili giây</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="image-container">
+              <img src="/assets/images/touchSingle-code.png" alt="TouchSingle">
+              <img src="/assets/images/touchSingle-ui.png" alt="TouchSingle">
+            </div>
+            <!-- End TouchSingle -->
+
+            <!-- TouchRipple -->
+            <p><strong>TouchRipple:</strong> Component Pressable (hỗ trợ hiệu ứng ripple cho các button)</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>extend PressableProps</code></td>
+                    <td>any</td>
+                    <td>kế thừa tất cả các props của PressableProps(VD:onPress,onFocus,onBlur )</td>
+                  </tr>
+                  <tr>
+                    <td><code>color</code></td>
+                    <td>string</td>
+                    <td>màu của hiệu ứng ripple</td>
+                  </tr>
+                  <tr>
+                    <td><code>duration</code></td>
+                    <td>number</td>
+                    <td>thời gian tồn tại của hiệu ứng ripple</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="image-container">
+              <img src="/assets/images/touchRipple-code.png" alt="TouchRipple">
+
+            </div>
+            <!-- End TouchRipple -->
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- anchor-sidebar -->
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <nz-link nzHref="#overview" nzTitle="1.1. Tổng quan quy trình phát triển Mini App"></nz-link>
+        <nz-link nzHref="#review-process" nzTitle="1.2. Tổng quan quy trình kiểm duyệt Mini App"></nz-link>
+        <nz-link nzHref="#development-overview" nzTitle="1.3. Tổng quan phát triển"></nz-link>
+      </nz-anchor>
+    </div>
+  </div>
+</div>

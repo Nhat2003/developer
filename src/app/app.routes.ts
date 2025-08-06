@@ -192,11 +192,27 @@ export const routes: Routes = [
       },
       {
         path: 'development-guide',
-        loadComponent: () => import('./components/MiniAppDevDocsComponent/development-guide/development-guide.component')
-        .then(m => m.DevelopmentGuideComponent),
         data: {
           breadcrumb: 'Hướng dẫn phát triển'
-        }
+        },
+        children: [
+          {
+            path: 'get-started',
+            loadComponent: () => import('./components/MiniAppDevDocsComponent/development-guide/start-center/start-center.component')
+            .then(m => m.StartCenterComponent),
+            data: {
+              breadcrumb: 'Bắt đầu với Mini App Center'
+            }
+          },
+          {
+            path: 'develop-guide',
+            loadComponent: () => import('./components/MiniAppDevDocsComponent/development-guide/develop-guide/develop-guide.component')
+            .then(m => m.DevelopGuideComponent),
+            data: {
+              breadcrumb: 'Hướng dẫn phát triển'
+            }
+          }
+        ]
       }
     ]
   },

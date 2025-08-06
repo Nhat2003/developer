@@ -14,8 +14,10 @@ import { filter } from 'rxjs/operators';
 interface MenuItem {
   label: string;
   key: string;
-  routerLink: string;
+  routerLink?: string;
   isActive?: boolean;
+  isOpen?: boolean;
+  children?: MenuItem[];
 }
 
 
@@ -93,10 +95,15 @@ export class SidebarComponent implements OnInit {
       isOpen: false,
       children: [
         { label: 'Giới thiệu', key: 'introduction', routerLink: '/development-docs/introduction' },
-        { label: 'Hướng dẫn phát triển', key: 'development-guide', routerLink: '/development-docs/development-guide' },
+        {
+          label: 'Hướng dẫn phát triển',
+          key: 'development-guide',
+          children: [
+            { label: 'Bắt đầu với Mini App Center', key: 'get-started', routerLink: '/development-docs/development-guide/get-started' },
+            { label: 'Hướng dẫn phát triển', key: 'development-guide', routerLink: '/development-docs/development-guide/develop-guide' },
 
-
-
+          ]
+        }
       ]
     },
     {
@@ -131,6 +138,12 @@ export class SidebarComponent implements OnInit {
 
   toggleSection(index: number): void {
     this.sidebarMenuItems[index].isOpen = !this.sidebarMenuItems[index].isOpen;
+  }
+
+  toggleSubMenu(item: MenuItem): void {
+    if (item.children) {
+      item.isOpen = !item.isOpen;
+    }
   }
 
 
@@ -180,16 +193,35 @@ export class SidebarComponent implements OnInit {
       section.isOpen = false;
       section.children.forEach(item => {
         item.isActive = currentUrl === item.routerLink;
+        item.isOpen = false;
+
+        // Kiểm tra children của item
+        if (item.children) {
+          item.children.forEach(child => {
+            child.isActive = currentUrl === child.routerLink;
+          });
+        }
       });
     });
 
     // Tìm và mở section chứa item active
     const activeSectionIndex = this.sidebarMenuItems.findIndex(section =>
-      section.children.some(item => item.isActive)
+      section.children.some(item =>
+        item.isActive || (item.children && item.children.some(child => child.isActive))
+      )
     );
 
     if (activeSectionIndex !== -1) {
       this.sidebarMenuItems[activeSectionIndex].isOpen = true;
+
+      // Mở submenu nếu có item active trong children
+      const activeItem = this.sidebarMenuItems[activeSectionIndex].children.find(item =>
+        item.children && item.children.some(child => child.isActive)
+      );
+
+      if (activeItem) {
+        activeItem.isOpen = true;
+      }
     }
   }
 
@@ -202,16 +234,35 @@ export class SidebarComponent implements OnInit {
       section.isOpen = false;
       section.children.forEach(child => {
         child.isActive = child.key === item.key;
+        child.isOpen = false;
+
+        // Reset children của child
+        if (child.children) {
+          child.children.forEach(grandChild => {
+            grandChild.isActive = grandChild.key === item.key;
+          });
+        }
       });
     });
 
     // Tìm và mở section chứa item được click
     const activeSectionIndex = this.sidebarMenuItems.findIndex(section =>
-      section.children.some(child => child.key === item.key)
+      section.children.some(child =>
+        child.key === item.key || (child.children && child.children.some(grandChild => grandChild.key === item.key))
+      )
     );
 
     if (activeSectionIndex !== -1) {
       this.sidebarMenuItems[activeSectionIndex].isOpen = true;
+
+      // Mở submenu nếu item được click là child
+      const parentItem = this.sidebarMenuItems[activeSectionIndex].children.find(child =>
+        child.children && child.children.some(grandChild => grandChild.key === item.key)
+      );
+
+      if (parentItem) {
+        parentItem.isOpen = true;
+      }
     }
 
     // Đóng menu mobile khi click vào item

@@ -78,12 +78,35 @@
         <!-- Section Children -->
         <div class="section-children" [class.expanded]="section.isOpen">
           <div class="menu-item" *ngFor="let item of section.children" [class.active]="item.isActive">
-            <a [routerLink]="item.routerLink"
-               routerLinkActive="active-link"
-               class="menu-link"
-               (click)="onMenuClick(item)">
-              {{ item.label }}
-            </a>
+            <!-- Parent Menu Item -->
+            <div class="menu-item-content" *ngIf="!item.children">
+              <a [routerLink]="item.routerLink"
+                 routerLinkActive="active-link"
+                 class="menu-link"
+                 (click)="onMenuClick(item)">
+                {{ item.label }}
+              </a>
+            </div>
+
+            <!-- Parent Menu Item with Children -->
+            <div class="menu-item-with-children" *ngIf="item.children">
+              <div class="parent-menu-item" (click)="toggleSubMenu(item)">
+                <span class="parent-label">{{ item.label }}</span>
+                <span nz-icon [nzType]="item.isOpen ? 'up' : 'down'" class="submenu-icon"></span>
+              </div>
+
+              <!-- Submenu Children -->
+              <div class="submenu-children" [class.expanded]="item.isOpen">
+                <div class="submenu-item" *ngFor="let child of item.children" [class.active]="child.isActive">
+                  <a [routerLink]="child.routerLink"
+                     routerLinkActive="active-link"
+                     class="submenu-link"
+                     (click)="onMenuClick(child)">
+                    {{ child.label }}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

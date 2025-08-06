@@ -1,0 +1,70 @@
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section h2 {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.subsection {
+  margin-bottom: 24px;
+}
+
+
+.table-container {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.terminology-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.terminology-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.terminology-table th {
+  color: white;
+  font-weight: 600;
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.terminology-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #595959;
+  line-height: 1.5;
+}
+
+.terminology-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+
+/* Responsive adjustments for table */
+@media (max-width: 768px) {
+  .terminology-table th,
+  .terminology-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .terminology-table th,
+  .terminology-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
