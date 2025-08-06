@@ -166,9 +166,40 @@ export const routes: Routes = [
         data: {
           breadcrumb: 'Tiêu chuẩn thị giác'
         }
-      },  
+      },
     ]
-  }
+  },
+
+  // Tài liệu hướng dẫn phát triển Mini App
+  {
+    path: 'development-docs',
+    data: {
+      breadcrumb: 'Tài liệu hướng dẫn phát triển Mini App'
+    },
+    children: [
+      {
+        path: '',
+        redirectTo: 'introduction',
+        pathMatch: 'full'
+      },
+      {
+        path: 'introduction',
+        loadComponent: () => import('./components/MiniAppDevDocsComponent/introduction/introduction.component')
+        .then(m => m.IntroductionComponent),
+        data: {
+          breadcrumb: 'Giới thiệu'
+        }
+      },
+      {
+        path: 'development-guide',
+        loadComponent: () => import('./components/MiniAppDevDocsComponent/development-guide/development-guide.component')
+        .then(m => m.DevelopmentGuideComponent),
+        data: {
+          breadcrumb: 'Hướng dẫn phát triển'
+        }
+      }
+    ]
+  },
 
 ];
 

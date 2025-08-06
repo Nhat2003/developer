@@ -1,0 +1,14 @@
+.step-item-title span{
+ font-size: 16px;
+ font-weight: 600;
+ font-style: italic;
+}
+.step-item-color{
+  color: #518EFF;
+  font-weight: 600;
+  font-style: italic;
+}
+.image-grey img{
+  filter: contrast(1.15) brightness(1.08) saturate(1.2);
+}
+

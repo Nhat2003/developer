@@ -1,3 +1,4 @@
+
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -27,12 +28,18 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
   searchValue = '';
+
+
   isNavbarHidden = false;
+
   activeDropdown: number | null = null;
+
+
   private lastScrollTop = 0;
 
-  // Menu items for main navigation
+
   mainMenuItems = [
     {
       label: 'Bắt đầu',
@@ -69,11 +76,12 @@ export class NavbarComponent {
     }
   ];
 
-  // Language options
+
   languageOptions = [
     { label: 'Tiếng Việt', key: 'vi' },
     { label: 'English', key: 'en' }
   ];
+
 
   onSearch(): void {
     console.log('Searching for:', this.searchValue);
@@ -82,6 +90,7 @@ export class NavbarComponent {
   onLanguageChange(lang: string): void {
     console.log('Language changed to:', lang);
   }
+
 
   onMenuClick(item: any): void {
     console.log('Menu item clicked:', item);
@@ -98,14 +107,15 @@ export class NavbarComponent {
     this.activeDropdown = null;
   }
 
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > this.lastScrollTop && st > 20) {
-
+      // Scroll xuống - ẩn navbar
       this.isNavbarHidden = true;
     } else {
-
+      // Scroll lên - hiện navbar
       this.isNavbarHidden = false;
     }
     this.lastScrollTop = st <= 0 ? 0 : st;

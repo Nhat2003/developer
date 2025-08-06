@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NzAnchorModule } from 'ng-zorro-antd/anchor';
 
 @Component({
   selector: 'app-user-friendly-interface',
-  imports: [],
+  imports: [CommonModule, NzAnchorModule],
   templateUrl: './user-friendly-interface.component.html',
   styleUrl: './user-friendly-interface.component.css'
 })

@@ -1,1 +1,57 @@
-<p>result-notification works!</p>
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content">
+      <h1>Thông báo kết quả</h1>
+      <p class="description">
+        Ngoài việc cho người dùng biết quá trình tải trang, bạn cũng cần cung cấp cho người dùng các kết quả phù hợp với mỗi trường hợp xử lý trên ứng dụng của bạn, đặc biệt là khi phát sinh các trường hợp lỗi, cần thông báo và đưa ra hướng dẫn cho người dùng.
+      </p>
+
+
+
+
+      <div class="steps">
+
+
+        <ul>
+          <li id="step-1">Phản hồi về kết quả - dạng popup: cơ chế phản hồi về kết quả dạng popup được sử dụng khi cần thao tác và quyết định của người dùng cho hướng đi tiếp theo trong ứng dụng.</li>
+          <div class="image-container">
+            <img src="/assets/images/notification_1.png" alt="Phản hồi về kết quả - dạng popup" />
+          </div>
+          <li id="step-2">Phản hồi về kết quả - dạng trang kết quả: cơ chế phản hồi dạng trang kết quả nên sử dụng trong trường hợp đã đến điểm cuối hoặc kết thúc một tính năng, chức năng, luồng hoạt động và đưa ra thông báo đối với các trường hợp phát sinh lỗi, cung cấp hướng dẫn cho người dùng nên làm gì tiếp theo.</li>
+          <div class="image-container">
+            <img src="/assets/images/notification_2.png" alt="Phản hồi về kết quả - dạng trang kết quả" />
+          </div>
+          <li id="step-3">Phản hồi về kết quả - dạng Modal: Cơ chế phản hồi này phù hợp để thông báo cho người sử dụng về các thông tin, quá trình quan trọng đã được hoàn thành. Thông báo này sẽ tự được tắt sau 1,5 giây mà không cần sự tác động của người dùng.</li>
+          <div class="image-container">
+            <img src="/assets/images/notification_3.png" alt="Phản hồi về kết quả - dạng Modal" />
+          </div>
+
+          <ul id="step-4" class="description">Cần lưu ý thông báo rõ ràng và hướng dẫn người dùng khi có phát sinh sự cố:
+            <li>Khi xảy ra lỗi thông thường, cần thông báo lý do lỗi, xác định lỗi và hướng dẫn người dùng sửa lỗi. Với các màn hình nhập liệu, đặc biệt là các màn hình với nhiều trường thông tin, các trường không hợp lệ cần được chỉ rõ để hỗ trợ người dùng dễ dàng sửa đổi.</li>
+            <li>Khi xảy ra lỗi hệ thống (lỗi mạng hay sự cố máy chủ) hay lỗi cục bộ trên màn hình, cần thông báo và đưa ra nút xử lý tương ứng.</li>
+            <div class="image-container">
+              <img src="/assets/images/notification_4.png" alt="Thông báo rõ ràng " />
+            </div>
+          </ul>
+        </ul>
+
+
+      </div>
+
+
+    </div>
+
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <nz-link nzHref="#step-1" nzTitle="Phản hồi về kết quả - dạng popup"></nz-link>
+        <nz-link nzHref="#step-2" nzTitle="Phản hồi về kết quả - dạng trang kết quả"></nz-link>
+        <nz-link nzHref="#step-3" nzTitle="Phản hồi về kết quả - dạng Modal"></nz-link>
+        <nz-link nzHref="#step-4" nzTitle="Cần lưu ý thông báo rõ ràng và hướng dẫn người dùng khi có phát sinh sự cố"></nz-link>
+
+      </nz-anchor>
+    </div>
+  </div>
+</div>

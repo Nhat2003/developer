@@ -1,3 +1,4 @@
+
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
@@ -9,6 +10,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { filter } from 'rxjs/operators';
 
+
 interface MenuItem {
   label: string;
   key: string;
@@ -16,12 +18,14 @@ interface MenuItem {
   isActive?: boolean;
 }
 
+
 interface MenuSection {
   title: string;
   icon: string;
   isOpen: boolean;
   children: MenuItem[];
 }
+
 
 @Component({
   selector: 'app-sidebar',
@@ -41,9 +45,14 @@ interface MenuSection {
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent implements OnInit {
+
   isCollapsed = false;
+
   isMobileMenuOpen = false;
+
+
   searchValue = '';
+
 
   sidebarMenuItems: MenuSection[] = [
     {
@@ -83,9 +92,11 @@ export class SidebarComponent implements OnInit {
       icon: 'down',
       isOpen: false,
       children: [
-        { label: 'UI Components', key: 'ui-components', routerLink: '/development-guide/ui-components' },
-        { label: 'API Reference', key: 'api-reference', routerLink: '/development-guide/api-reference' },
-        { label: 'SDK Downloads', key: 'sdk-downloads', routerLink: '/development-guide/sdk-downloads' }
+        { label: 'Giới thiệu', key: 'introduction', routerLink: '/development-docs/introduction' },
+        { label: 'Hướng dẫn phát triển', key: 'development-guide', routerLink: '/development-docs/development-guide' },
+
+
+
       ]
     },
     {
@@ -110,29 +121,36 @@ export class SidebarComponent implements OnInit {
     }
   ];
 
-  // Language options
+
+
   languageOptions = [
     { label: 'Tiếng Việt', key: 'vi' },
     { label: 'English', key: 'en' }
   ];
 
+
   toggleSection(index: number): void {
     this.sidebarMenuItems[index].isOpen = !this.sidebarMenuItems[index].isOpen;
   }
+
 
   openMobileMenu(): void {
     this.isMobileMenuOpen = true;
     document.body.style.overflow = 'hidden';
   }
 
+
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
     document.body.style.overflow = '';
   }
 
+
   onSearch(): void {
     console.log('Searching for:', this.searchValue);
   }
+
+
 
   onLanguageChange(lang: string): void {
     console.log('Language changed to:', lang);
@@ -140,7 +158,12 @@ export class SidebarComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+
   ngOnInit(): void {
+    // Khởi tạo trạng thái active khi component được load
+    this.updateActiveState();
+
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
@@ -148,32 +171,57 @@ export class SidebarComponent implements OnInit {
     });
   }
 
+
   updateActiveState(): void {
     const currentUrl = this.router.url;
 
+    // Đóng tất cả các section trước
     this.sidebarMenuItems.forEach(section => {
+      section.isOpen = false;
       section.children.forEach(item => {
         item.isActive = currentUrl === item.routerLink;
       });
     });
+
+    // Tìm và mở section chứa item active
+    const activeSectionIndex = this.sidebarMenuItems.findIndex(section =>
+      section.children.some(item => item.isActive)
+    );
+
+    if (activeSectionIndex !== -1) {
+      this.sidebarMenuItems[activeSectionIndex].isOpen = true;
+    }
   }
+
 
   onMenuClick(item: MenuItem): void {
     console.log('Menu item clicked:', item);
 
+    // Đóng tất cả các section trước
     this.sidebarMenuItems.forEach(section => {
+      section.isOpen = false;
       section.children.forEach(child => {
         child.isActive = child.key === item.key;
       });
     });
 
-    // Close mobile menu when item is clicked
+    // Tìm và mở section chứa item được click
+    const activeSectionIndex = this.sidebarMenuItems.findIndex(section =>
+      section.children.some(child => child.key === item.key)
+    );
+
+    if (activeSectionIndex !== -1) {
+      this.sidebarMenuItems[activeSectionIndex].isOpen = true;
+    }
+
+    // Đóng menu mobile khi click vào item
     this.closeMobileMenu();
   }
 
+
   @HostListener('window:resize', [])
   onWindowResize() {
-    // Close mobile menu when screen size changes to desktop
+
     if (window.innerWidth > 768 && this.isMobileMenuOpen) {
       this.closeMobileMenu();
     }
