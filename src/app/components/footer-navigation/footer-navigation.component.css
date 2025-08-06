@@ -1,0 +1,83 @@
+.footer-navigation {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e1e5e9;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 2rem;
+}
+
+/* Khi chỉ có một nút, căn giữa */
+.nav-container:has(.nav-item:only-child) {
+  justify-content: center;
+}
+
+.nav-item {
+  flex: 1;
+  max-width: 300px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.nav-item.empty {
+  cursor: default;
+}
+
+.nav-item.empty:hover {
+  border-color: #e1e5e9;
+  box-shadow: none;
+}
+
+.nav-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link.disabled {
+  color: #adb5bd;
+  cursor: default;
+}
+
+.nav-arrow {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-item {
+    max-width: 100%;
+    width: 100%;
+  }
+}

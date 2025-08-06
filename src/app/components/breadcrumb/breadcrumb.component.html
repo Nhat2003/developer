@@ -1,0 +1,18 @@
+<nz-breadcrumb>
+
+  <nz-breadcrumb-item>
+    <a routerLink="/">
+      <nz-icon nzType="home" />
+      <span>Trang chủ</span>
+    </a>
+  </nz-breadcrumb-item>
+
+  <nz-breadcrumb-item *ngFor="let item of breadcrumbs; let last = last">
+    <ng-container *ngIf="!last">
+      <a [routerLink]="item.url">{{ item.label }}</a>
+    </ng-container>
+    <ng-container *ngIf="last">
+      {{ item.label }}
+    </ng-container>
+  </nz-breadcrumb-item>
+</nz-breadcrumb>

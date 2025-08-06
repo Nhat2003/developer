@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="content-wrapper">
+    <!-- Content -->
+    <div class="content">
+      <h1>Cập nhật Mini App Framework</h1>
+      <p class="description">Hướng dẫn chi tiết quy trình cập nhật phiên bản Mini App mới trên nền tảng Super App</p>
+
+      <!-- Main Image -->
+      <div class="top-image">
+        <img src="/assets/images/update-framework.png" alt="Cập nhật Mini App Framework">
+      </div>
+
+      <div class="steps">
+        <h2>QUY TRÌNH CẬP NHẬT FRAMEWORK</h2>
+
+        <h3 id="step-1">Bước 1: Xây dựng phiên bản nâng cấp</h3>
+        <p>Super App phát hành phiên bản nâng cấp cho bộ khung Mini App Framework nhằm hỗ trợ nhà phát triển các công cụ tối đa trong quá trình phát triển Mini App. </p>
+
+        <h3 id="step-2">Bước 2: Triển khai thử nghiệm</h3>
+        <ul>
+          <li>Phiên bản Mini App Framework nâng cấp được Super App đóng gói và gửi thông báo tới Nhà phát triển Mini App thông qua địa chỉ Email của Nhà phát triển.</li>
+          <li>Super App đồng thời cũng công khai cung cấp các tin tức về nội dung nâng cấp của phiên bản Mini App Framework.</li>
+        </ul>
+
+
+
+              <h3 id="step-3">Bước 3: Đánh giá tác động và ảnh hưởng</h3>
+        <p>Nhà phát triển Mini App truy cập vào tài liệu được cung cấp và đánh giá về các tác động, ảnh hưởng của phiên bản Mini App Framework tới Mini App của mình.</p>
+
+        <p>Tài liệu cung cấp cho Nhà phát triển về việc thay đổi nâng cấp Mini App Framework sẽ mô tả chi tiết các thành phần được thay đổi/nâng cấp trong từng công cụ và tài nguyên cung cấp:</p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <h5>Mini App Source Base</h5>
+            <p>Bộ khung phát triển Mini App</p>
+          </div>
+          <div class="info-item">
+            <h5>UI Component Kits</h5>
+            <p>Kế thừa các thành phần UI Component cơ bản để thiết kế Mini App, tăng tính nhất quán trên toàn hệ thống</p>
+          </div>
+          <div class="info-item">
+            <h5>Mini App API</h5>
+            <p>API để Mini App tương tác với Super App</p>
+          </div>
+          <div class="info-item">
+            <h5>Mini CLI</h5>
+            <p>Tiện ích, các lệnh hỗ trợ phát triển Mini App</p>
+          </div>
+        </div>
+
+        <h3 id="step-4">Bước 4: Cài đặt bản cập nhật Framework</h3>
+        <p>Nhà phát triển tiến hành cài đặt bản cập nhật Mini App Framework</p>
+
+        <h3 id="step-5">Bước 5: Chỉnh sửa và nâng cấp Mini App</h3>
+        <p>Nhà phát triển tiến hành chỉnh sửa nâng cấp Mini App của mình dựa trên tài liệu được cung cấp nhằm đáp ứng tính tương thích của Mini App với phiên bản nâng cấp Mini App Framework.</p>
+        <p>Sau khi hoàn thành nâng cấp Mini App, Nhà phát triển tiến hành triển khai phiên bản nâng cấp của Mini App trên môi trường thử nghiệm mà Nền tảng Super App cung cấp</p>
+
+        <h3 id="step-6">Bước 6: Kiểm tra chất lượng</h3>
+        <p>Nhà phát triển thực hiện các bước kiểm tra cần thiết để đảm bảo chất lượng của Mini App trước khi gửi đi xét duyệt</p>
+
+        <h3 id="step-7">Bước 7: Gửi yêu cầu xét duyệt</h3>
+        <p>Nhà phát triển khởi tạo yêu cầu xét duyệt phiên bản nâng cấp Mini App tới Super App</p>
+
+        <h3 id="step-8">Bước 8: Quy trình xét duyệt</h3>
+        <p>Super App thực hiện quy trình kiểm duyệt phiên bản Mini App theo yêu cầu của Nhà phát triển, việc kiểm duyệt phiên bản Mini App tương tự như quy trình <span class="link-text" (click)="navigateToReviewApp()">Kiểm duyệt Mini App</span></p>
+
+        <h3 id="step-9">Bước 9: Phát hành phiên bản mới</h3>
+        <p>Nếu phiên bản Mini App đáp ứng được các tiêu chí kiểm duyệt, Super App cấp phép phát hành phiên bản Mini App mới, thay thế cho phiên bản cũ trên bản Production để cung cấp các nâng cấp cải tiến mới của Mini App tới người dùng cuối.</p>
+        <p>Quy trình phát hành phiên bản Mini App tương tự như quy trình <span class="link-text" (click)="navigateToReleaseApp()">Phát hành Mini App</span></p>
+      </div>
+
+
+
+    </div>
+
+    <div class="anchor-sidebar">
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <nz-link nzHref="#step-1" nzTitle="Bước 1: Xây dựng phiên bản nâng cấp"></nz-link>
+        <nz-link nzHref="#step-2" nzTitle="Bước 2: Triển khai thử nghiệm"></nz-link>
+        <nz-link nzHref="#step-3" nzTitle="Bước 3: Đánh giá tác động và ảnh hưởng"></nz-link>
+        <nz-link nzHref="#step-4" nzTitle="Bước 4: Cài đặt bản cập nhật Framework"></nz-link>
+        <nz-link nzHref="#step-5" nzTitle="Bước 5: Chỉnh sửa và nâng cấp Mini App"></nz-link>
+        <nz-link nzHref="#step-6" nzTitle="Bước 6: Kiểm tra chất lượng"></nz-link>
+        <nz-link nzHref="#step-7" nzTitle="Bước 7: Gửi yêu cầu xét duyệt"></nz-link>
+        <nz-link nzHref="#step-8" nzTitle="Bước 8: Quy trình xét duyệt"></nz-link>
+        <nz-link nzHref="#step-9" nzTitle="Bước 9: Phát hành phiên bản mới"></nz-link>
+      </nz-anchor>
+    </div>
+  </div>
+
+
+
+</div>

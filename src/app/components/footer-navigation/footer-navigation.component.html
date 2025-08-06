@@ -1,0 +1,19 @@
+<div class="footer-navigation">
+  <div class="nav-container">
+    <!-- Previous Button -->
+    <div class="nav-item" *ngIf="previousPage" (click)="navigateToPage(previousPage.path)">
+      <div class="nav-label">Trước</div>
+      <div class="nav-link">
+        <span class="nav-arrow"><<</span> {{ previousPage.title }}
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <div class="nav-item" *ngIf="nextPage" (click)="navigateToPage(nextPage.path)">
+      <div class="nav-label">Kế tiếp</div>
+      <div class="nav-link">
+        {{ nextPage.title }} <span class="nav-arrow">>></span>
+      </div>
+    </div>
+  </div>
+</div>

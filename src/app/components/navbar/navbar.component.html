@@ -1,0 +1,82 @@
+<nz-header class="navbar" [ngClass]="{'hide-navbar': isNavbarHidden}">
+  <div class="navbar-container">
+    <!-- Logo Section -->
+    <div class="navbar-logo">
+      <div class="logo-container">
+        <div class="logo-square">
+          <span class="logo-text">VNPT</span>
+        </div>
+        <span class="logo-title">Developers</span>
+      </div>
+    </div>
+
+         <!-- Main Navigation Menu -->
+     <div class="navbar-menu">
+       <ul class="main-menu">
+         <li class="menu-item"
+             *ngFor="let item of mainMenuItems; let i = index"
+             (mouseenter)="showDropdown(i)"
+             (mouseleave)="hideDropdown(i)">
+
+           <!-- Menu Title -->
+           <span class="menu-title">{{ item.label }}</span>
+           <span class="menu-arrow" *ngIf="item.children && item.children.length > 0">▼</span>
+
+           <!-- Custom Dropdown -->
+           <div class="custom-dropdown"
+                [class.show]="activeDropdown === i"
+                *ngIf="item.children && item.children.length > 0">
+
+             <div class="dropdown-grid">
+               <div class="dropdown-item"
+                    *ngFor="let child of item.children; let j = index"
+                    (click)="onMenuClick(child)">
+
+                 <div class="item-title">
+                   {{ child.label }}
+                 </div>
+
+               </div>
+             </div>
+
+           </div>
+
+         </li>
+       </ul>
+     </div>
+
+    <!-- Right Section: Search, Language, GitHub -->
+    <div class="navbar-right">
+      <!-- Search Bar -->
+      <div class="search-container">
+        <nz-input-group [nzSuffix]="searchSuffix" class="search-input">
+          <nz-icon class="search-icon" nzType="search" nzTheme="outline" />
+          <input nz-input class="input_search" [(ngModel)]="searchValue" placeholder="Tìm kiếm tài liệu"
+            (keyup.enter)="onSearch()" />
+        </nz-input-group>
+        <ng-template #searchSuffix>
+          <span class="search-shortcut">Ctrl+K</span>
+        </ng-template>
+      </div>
+
+      <!-- Language Selector -->
+      <div class="language-dropdown">
+        <button nz-button class="language-button">
+          <span nz-icon nzType="global" nzTheme="outline"></span>
+          <span class="language-text">Tiếng Việt</span>
+          <span nz-icon nzType="down" nzTheme="outline"></span>
+        </button>
+        <ul class="language-menu">
+          <li class="language-item" *ngFor="let lang of languageOptions" (click)="onLanguageChange(lang.key)">
+            {{ lang.label }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- GitHub Link -->
+      <a href="https://github.com" target="_blank" class="github-link">
+        <span nz-icon nzType="github" nzTheme="outline"></span>
+      </a>
+    </div>
+  </div>
+</nz-header>

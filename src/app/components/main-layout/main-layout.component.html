@@ -1,0 +1,30 @@
+<div class="main-layout">
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="content-wrapper">
+
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <app-breadcrumb></app-breadcrumb>
+        <router-outlet></router-outlet>
+        <app-footer-navigation
+        *ngIf="showFooterNavigation && navigationFlow"
+        [currentPage]="navigationFlow.currentPage"
+        [previousPage]="navigationFlow.previousPage"
+        [nextPage]="navigationFlow.nextPage">
+      </app-footer-navigation>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+
+</div>
