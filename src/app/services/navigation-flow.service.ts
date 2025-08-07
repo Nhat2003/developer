@@ -26,6 +26,11 @@ export class NavigationFlowService {
     'design-standards': {
       firstPage: 'highlight-important-points',
       lastPage: 'visual-standard',
+      nextSection: 'development-guide'
+    },
+    'development-guide': {
+      firstPage: 'introduction',
+      lastPage: 'develop-guide',
       nextSection: null // Không có mục tiếp theo
     }
   };
@@ -114,6 +119,21 @@ export class NavigationFlowService {
     {
       currentPage: 'visual-standard',
       previousPage: { path: '/design-standards/guide-screen', title: 'Màn hình hướng dẫn' }
+    },
+
+    // Development Guide pages
+    {
+      currentPage: 'introduction',
+      nextPage: { path: '/development-docs/development-guide/get-started', title: 'Bắt đầu với Mini App Center' }
+    },
+    {
+      currentPage: 'get-started',
+      previousPage: { path: '/development-docs/introduction', title: 'Giới thiệu' },
+      nextPage: { path: '/development-docs/development-guide/develop-guide', title: 'Hướng dẫn phát triển' }
+    },
+    {
+      currentPage: 'develop-guide',
+      previousPage: { path: '/development-docs/development-guide/get-started', title: 'Bắt đầu với Mini App Center' }
     }
   ];
 
@@ -153,7 +173,8 @@ export class NavigationFlowService {
   private getSectionTitle(section: string): string {
     const sectionTitles: { [key: string]: string } = {
       'miniapp-workflow': 'Quy trình phát triển Mini App',
-      'design-standards': 'Quy chuẩn thiết kế Mini App'
+      'design-standards': 'Quy chuẩn thiết kế Mini App',
+      'development-guide': 'Hướng dẫn phát triển'
     };
     return sectionTitles[section] || section;
   }

@@ -59,7 +59,7 @@ export class MainLayoutComponent implements OnInit {
     const currentUrl = this.router.url;
 
     // Hiển thị footer navigation cho các trang có navigation flow
-    if (currentUrl.includes('/miniapp-workflow/') || currentUrl.includes('/design-standards/')) {
+    if (currentUrl.includes('/miniapp-workflow/') || currentUrl.includes('/design-standards/') || currentUrl.includes('/development-guide/') || currentUrl.includes('/development-docs/')) {
       const pageName = this.getPageNameFromUrl(currentUrl);
       this.navigationFlow = this.navigationFlowService.getNavigationFlow(pageName);
       this.showFooterNavigation = !!this.navigationFlow;
@@ -70,7 +70,7 @@ export class MainLayoutComponent implements OnInit {
   }
 
   private getPageNameFromUrl(url: string): string {
-    const segments = url.split('/');
+    const segments = url.split('/').filter(Boolean); // loại bỏ segment rỗng
     const lastSegment = segments[segments.length - 1];
 
     // Map URL segments to page names
@@ -94,7 +94,12 @@ export class MainLayoutComponent implements OnInit {
       'result-notification': 'result-notification',
       'reduce-input': 'reduce-input',
       'guide-screen': 'guide-screen',
-      'visual-standard': 'visual-standard'
+      'visual-standard': 'visual-standard',
+
+      // Development Guide pages
+      'introduction': 'introduction',
+      'start-center': 'start-center',
+      'develop-guide': 'develop-guide'
     };
 
     return pageNameMap[lastSegment] || lastSegment;

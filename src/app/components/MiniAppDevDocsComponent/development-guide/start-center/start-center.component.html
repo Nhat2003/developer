@@ -1,6 +1,7 @@
 <div class="container">
   <div class="content-wrapper">
     <div class="content">
+
       <h1>Bắt đầu với Mini App Center</h1>
 
       <p class="description">
@@ -73,10 +74,10 @@
         </div>
       </section>
 
-      <section id="development-overview" class="section">
+      <div id="development-overview" class="section">
         <h2>1.3. Tổng quan phát triển</h2>
 
-        <div class="subsection">
+        <div id="preparation" class="subsection">
           <h3>1.3.1. Chuẩn bị</h3>
 
           <div class="info-item">
@@ -90,10 +91,10 @@
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="setup-tools" class="subsection">
           <h3>1.3.2. Thiết lập công cụ và môi trường phát triển</h3>
 
-          <div class="subsection">
+          <div id="source-base" class="subsection">
             <h4>1.3.2.1. Mini App Source Base</h4>
             <p>Mini App Source Base là bộ khung cho việc phát triển các Mini App</p>
 
@@ -188,7 +189,7 @@
             </div>
           </div>
 
-          <div class="subsection">
+          <div id="ui-components" class="subsection">
             <h4>1.3.2.2. UI Component Kits</h4>
             <p>Hệ thống UI Components, cung cấp bộ các thành phần UI cơ bản cần thiết cho một ứng dụng Mini App như: văn bản, nút, cửa sổ bật lên, màu, biểu tượng, khoảng cách,...</p>
             <p>Các thành phần được tạo sẵn và thiết kế theo chuẩn mobile; hỗ trợ nhà phát triển rút ngắn thời gian phát triển ứng dụng, đảm bảo tính nhất quán của UI và tạo được giao diện thân thiện hơn với người dùng</p>
@@ -201,141 +202,144 @@
             </div>
 
             <h5>● Danh sách các Component hiện có</h5>
-            <p><strong>Box:</strong> Component giống View của React-Native hỗ trợ style thông qua props</p>
+            <div id="box-component">
+              <p><strong>Box:</strong> Component giống View của React-Native hỗ trợ style thông qua props</p>
 
-            <div class="table-container">
-              <table class="component-table">
-                <thead>
-                  <tr>
-                    <th>Props</th>
-                    <th>Type</th>
-                    <th>Mô tả</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>extend ViewProps</code></td>
-                    <td>any</td>
-                    <td>kế thừa tất cả các props của View (VD: onLayout, style, hitSlop)</td>
-                  </tr>
-                  <tr>
-                    <td><code>padding</code></td>
-                    <td>NumberOrString hoặc NumberOrString[]</td>
-                    <td>
-                      khai báo padding cho Box<br>
-                      VD: <br>
-                      nếu muốn Box padding tất cả 10 : <code>padding=&#123;10&#125;</code><br>
-                      nếu muốn Box padding hai bên 10 ,trên dưới 20: <code>padding=&#123;[10, 20]&#125;</code><br>
-                      nếu muốn Box padding top 1, bottom 2, left 3, right 4: <code>padding=&#123;[1, 2,3,4]&#125;</code>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingHorizontal</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Horizontal</td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingVertical</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Vertical</td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingBottom</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Bottom</td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingTop</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Top</td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingLeft</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Left</td>
-                  </tr>
-                  <tr>
-                    <td><code>paddingRight</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box padding Right</td>
-                  </tr>
-                  <tr>
-                    <td><code>margin</code></td>
-                    <td>NumberOrString hoặc NumberOrString[]</td>
-                    <td>
-                      khai báo margin cho Box<br>
-                      VD: <br>
-                      nếu muốn Box margin tất cả 10 : <code>margin=&#123;10&#125;</code><br>
-                      nếu muốn Box margin hai bên 10 ,trên dưới 20: <code>margin=&#123;[10, 20]&#125;</code><br>
-                      nếu muốn Box margin top 1, bottom 2, left 3, right 4: <code>margin=&#123;[1, 2,3,4]&#125;</code>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>marginHorizontal</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box marginHorizontal</td>
-                  </tr>
-                  <tr>
-                    <td><code>marginVertical</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box marginVertical</td>
-                  </tr>
-                  <tr>
-                    <td><code>marginBottom</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box margin Bottom</td>
-                  </tr>
-                  <tr>
-                    <td><code>marginTop</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box margin Top</td>
-                  </tr>
-                  <tr>
-                    <td><code>marginLeft</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box margin Left</td>
-                  </tr>
-                  <tr>
-                    <td><code>marginRight</code></td>
-                    <td>number hoặc string</td>
-                    <td>Box margin Right</td>
-                  </tr>
-                  <tr>
-                    <td><code>flex</code></td>
-                    <td>number</td>
-                    <td>Box flex</td>
-                  </tr>
-                  <tr>
-                    <td><code>center</code></td>
-                    <td>boolean(default = false)</td>
-                    <td>style alignItems: center</td>
-                  </tr>
-                  <tr>
-                    <td><code>middle</code></td>
-                    <td>boolean(default = false)</td>
-                    <td>style justifyContent: center</td>
-                  </tr>
-                  <tr>
-                    <td><code>radius</code></td>
-                    <td>number</td>
-                    <td>borderRadius</td>
-                  </tr>
-                  <tr>
-                    <td><code>color</code></td>
-                    <td>string</td>
-                    <td>backgroundColor</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+              <div class="table-container">
+                <table class="component-table">
+                  <thead>
+                    <tr>
+                      <th>Props</th>
+                      <th>Type</th>
+                      <th>Mô tả</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>extend ViewProps</code></td>
+                      <td>any</td>
+                      <td>kế thừa tất cả các props của View (VD: onLayout, style, hitSlop)</td>
+                    </tr>
+                    <tr>
+                      <td><code>padding</code></td>
+                      <td>NumberOrString hoặc NumberOrString[]</td>
+                      <td>
+                        khai báo padding cho Box<br>
+                        VD: <br>
+                        nếu muốn Box padding tất cả 10 : <code>padding=&#123;10&#125;</code><br>
+                        nếu muốn Box padding hai bên 10 ,trên dưới 20: <code>padding=&#123;[10, 20]&#125;</code><br>
+                        nếu muốn Box padding top 1, bottom 2, left 3, right 4: <code>padding=&#123;[1, 2,3,4]&#125;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingHorizontal</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Horizontal</td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingVertical</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Vertical</td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingBottom</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Bottom</td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingTop</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Top</td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingLeft</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Left</td>
+                    </tr>
+                    <tr>
+                      <td><code>paddingRight</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box padding Right</td>
+                    </tr>
+                    <tr>
+                      <td><code>margin</code></td>
+                      <td>NumberOrString hoặc NumberOrString[]</td>
+                      <td>
+                        khai báo margin cho Box<br>
+                        VD: <br>
+                        nếu muốn Box margin tất cả 10 : <code>margin=&#123;10&#125;</code><br>
+                        nếu muốn Box margin hai bên 10 ,trên dưới 20: <code>margin=&#123;[10, 20]&#125;</code><br>
+                        nếu muốn Box margin top 1, bottom 2, left 3, right 4: <code>margin=&#123;[1, 2,3,4]&#125;</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>marginHorizontal</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box marginHorizontal</td>
+                    </tr>
+                    <tr>
+                      <td><code>marginVertical</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box marginVertical</td>
+                    </tr>
+                    <tr>
+                      <td><code>marginBottom</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box margin Bottom</td>
+                    </tr>
+                    <tr>
+                      <td><code>marginTop</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box margin Top</td>
+                    </tr>
+                    <tr>
+                      <td><code>marginLeft</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box margin Left</td>
+                    </tr>
+                    <tr>
+                      <td><code>marginRight</code></td>
+                      <td>number hoặc string</td>
+                      <td>Box margin Right</td>
+                    </tr>
+                    <tr>
+                      <td><code>flex</code></td>
+                      <td>number</td>
+                      <td>Box flex</td>
+                    </tr>
+                    <tr>
+                      <td><code>center</code></td>
+                      <td>boolean(default = false)</td>
+                      <td>style alignItems: center</td>
+                    </tr>
+                    <tr>
+                      <td><code>middle</code></td>
+                      <td>boolean(default = false)</td>
+                      <td>style justifyContent: center</td>
+                    </tr>
+                    <tr>
+                      <td><code>radius</code></td>
+                      <td>number</td>
+                      <td>borderRadius</td>
+                    </tr>
+                    <tr>
+                      <td><code>color</code></td>
+                      <td>string</td>
+                      <td>backgroundColor</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-            <div class="image-container">
-              <img src="/assets/images/start-center_1.png" alt="Code">
-              <img src="/assets/images/ui-component-kit.png" alt="Loading">
+              <div class="image-container">
+                <img src="/assets/images/start-center_1.png" alt="Code">
+                <img src="/assets/images/ui-component-kit.png" alt="Loading">
+              </div>
             </div>
 
             <!-- Text -->
-            <p><strong>Text:</strong> Component giống Text của React-Native hỗ trợ style thông qua props</p>
+            <div id="text-component">
+              <p><strong>Text:</strong> Component giống Text của React-Native hỗ trợ style thông qua props</p>
 
             <div class="table-container">
               <table class="component-table">
@@ -370,10 +374,12 @@
               <img src="/assets/images/text-code.png" alt="Text">
               <img src="/assets/images/text-ui.png" alt="Text">
             </div>
+            </div>
             <!-- End Text -->
 
             <!-- Thumb -->
-            <p><strong>Thumb:</strong> Component hiển thị hình ảnh (hỗ trợ cache ảnh)</p>
+            <div id="thumb-component">
+              <p><strong>Thumb:</strong> Component hiển thị hình ảnh (hỗ trợ cache ảnh)</p>
 
             <div class="table-container">
               <table class="component-table">
@@ -408,10 +414,12 @@
               <img src="/assets/images/thumb-code.png" alt="Thumb">
               <img src="/assets/images/thumb-UI.png" alt="Thumb">
             </div>
+            </div>
             <!-- End Thumb -->
 
             <!-- TouchSingle -->
-            <p><strong>TouchSingle:</strong> Component Pressable (hỗ trợ debound cho hàm onPress tránh việc used spam nút bấm)</p>
+            <div id="touchsingle-component">
+              <p><strong>TouchSingle:</strong> Component Pressable (hỗ trợ debound cho hàm onPress tránh việc used spam nút bấm)</p>
 
             <div class="table-container">
               <table class="component-table">
@@ -480,22 +488,1020 @@
 
             </div>
             <!-- End TouchRipple -->
+
+
+            <!-- TouchRippleSingle -->
+            <p><strong>TouchRippleSingle:</strong>Component Pressable (kết hợp TouchRipple và TouchSingle)</p>
+
+            <div class="table-container">
+              <table class="component-table">
+                <thead>
+                  <tr>
+                    <th>Props</th>
+                    <th>Type</th>
+                    <th>Mô tả</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>touchProps</code></td>
+                    <td>PressableProps</td>
+                    <td>kế thừa tất cả các props của PressableProps(VD:onPress,onFocus,onBlur )</td>
+                  </tr>
+                  <tr>
+                    <td><code>delay</code></td>
+                    <td>number</td>
+                    <td>thời gian debound tính theo mili giây</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+             <!-- TouchRippleSingle -->
+
+             <!-- Input -->
+             <p><strong>Input:</strong>Component Input(hỗ trợ style thông qua props)</p>
+
+             <div class="table-container">
+               <table class="component-table">
+                 <thead>
+                   <tr>
+                     <th>Props</th>
+                     <th>Type</th>
+                     <th>Mô tả</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td><code>extend TextInputProps</code></td>
+                     <td>any</td>
+                     <td>kế thừa tất cả các props của TextInputProps(VD:,onFocus,onBlur )</td>
+                   </tr>
+
+
+                 </tbody>
+               </table>
+             </div>
+             <div class="image-container">
+              <img src="/assets/images/input-code.png" alt="Input">
+
+            </div>
+              <!-- End Input -->
+
+              <!-- DatePicker -->
+              <p id="datepicker-component"><strong>DatePicker:</strong> Component DatePicker hiển thị chọn ngày tháng năm</p>
+
+              <div class="table-container">
+                <table class="component-table">
+                  <thead>
+                    <tr>
+                      <th>Props</th>
+                      <th>Type</th>
+                      <th>Mô tả</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>value</code></td>
+                      <td>Date</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>onChange</code></td>
+                      <td>function</td>
+                      <td>function với tham số (e: Date)được gọi mỗi khi chọn date</td>
+                    </tr>
+                    <tr>
+                      <td><code>children</code></td>
+                      <td>React Element</td>
+                      <td>component con (có thể bọc DatePicker bên ngoai component kế thừa Pressable )</td>
+                    </tr>
+                    <tr>
+                      <td><code>mode</code></td>
+                      <td>time | date | datetime</td>
+                      <td>loại datetime bạn muốn dùng</td>
+                    </tr>
+                    <tr>
+                      <td><code>minDate</code></td>
+                      <td>Date</td>
+                      <td>thời gian nhỏ nhất được chọn</td>
+                    </tr>
+                    <tr>
+                      <td><code>maxDate</code></td>
+                      <td>Date</td>
+                      <td>thời gian lớn nhất được chọn</td>
+                    </tr>
+                    <tr>
+                      <td><code>fromYear</code></td>
+                      <td>Date</td>
+                      <td>năm nhỏ nhất được chọn</td>
+                    </tr>
+                    <tr>
+                      <td><code>toYear</code></td>
+                      <td>Date</td>
+                      <td>năm lớn nhất được chọn</td>
+                    </tr>
+                    <tr>
+                      <td><code>imprerativeState</code></td>
+                      <td>boolean</td>
+                      <td>trạng thái ẩn hiện của DatePicker</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-container">
+                <table class="component-table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Type</th>
+                      <th>Mô tả</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>onClose</code></td>
+                      <td>ref function</td>
+                      <td>sử dụng ref để đóng DatePicker</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="image-container">
+               <div class="double-ui">
+                <img src="/assets/images/datepicker-ui_1.png" alt="DatePicker">
+                <img src="/assets/images/datepicker-ui_2.png" alt="DatePicker">
+               </div>
+                <img src="/assets/images/datepicker-code.png" alt="DatePicker">
+              </div>
+              <!-- End DatePicker -->
+               <!-- AlertProvider -->
+                  <p><strong>AlertProvider: </strong>Component Alert(hỗ trợ hiển thị thông báo trên toàn app)</p>
+
+               <div class="table-container">
+                 <table class="component-table">
+                   <thead>
+                     <tr>
+                       <th>Props</th>
+                       <th>Type</th>
+                       <th>Mô tả</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td><code>show</code></td>
+                       <td>function</td>
+                       <td>tham số :<br>
+                        title: string<br>
+                        content: string<br>
+                        action : &#123;<br>
+                        text: string<br>
+                        onPress: function void<br>
+                        &#125;[]<br>
+                        Sử dụng để hiện thông báo
+                        </td>
+                     </tr>
+                     <tr>
+                      <td><code>hide</code></td>
+                      <td>function</td>
+                      <td>sử dụng để ẩn thông báo</td>
+                    </tr>
+
+                   </tbody>
+                 </table>
+               </div>
+               <div class="image-container">
+                <img src="/assets/images/alertProvider-code.png" alt="AlertProvider">
+
+              </div>
+
+                <!-- End AlertProvider -->
+
+                <!-- Responsive -->
+                <p id="responsive-component"><strong>Responsive:</strong> Function hỗ trợ responsive theo từng thiết bị</p>
+
+                <div class="table-container">
+                  <table class="component-table">
+                    <thead>
+                      <tr>
+                        <th>Method</th>
+                        <th>Type</th>
+                        <th>Mô tả</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>widthLize</code></td>
+                        <td>function(size: number, w?: number)</td>
+                        <td>responsive theo chiều rộng</td>
+                      </tr>
+                      <tr>
+                        <td><code>heightLize</code></td>
+                        <td>function(size: number, w?: number)</td>
+                        <td>responsive theo chiều cao</td>
+                      </tr>
+                      <tr>
+                        <td><code>fontSizeLinze</code></td>
+                        <td>function(size: number, w?: number,h?: number)</td>
+                        <td>responsive text font size</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End Responsive -->
+
+                <!-- getOffset -->
+                <p id="getoffset-component"><strong>getOffset:</strong> helper: Function hỗ trợ lấy khoảng cách lấy khoảng cách StatusBar, bottom</p>
+
+                <div class="table-container">
+                  <table class="component-table">
+                    <thead>
+                      <tr>
+                        <th>Property</th>
+                        <th>Type</th>
+                        <th>Mô tả</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>getOffset().top</code></td>
+                        <td>number</td>
+                        <td>trả về chiều cao của StatusBar</td>
+                      </tr>
+                      <tr>
+                        <td><code>getOffset().bottom</code></td>
+                        <td>number</td>
+                        <td>trả về chiều cao của Bottom</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- End getOffset -->
+
+                <!-- AppProvider -->
+                <p id="appprovider-component"><strong>AppProvider:</strong> Component provider hỗ trợ đa ngôn ngữ</p>
+
+                <div class="table-container">
+                  <table class="component-table">
+                    <thead>
+                      <tr>
+                        <th>Property</th>
+                        <th>Type</th>
+                        <th>Mô tả</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>locale</code></td>
+                        <td>string</td>
+                        <td>ngôn ngữ hiện tại (vd : 'vi', 'en')</td>
+                      </tr>
+                      <tr>
+                        <td><code>translations</code></td>
+                        <td>Objects</td>
+                        <td>dữ liệu ngôn ngữ
+                          <br>
+                          <div class="image-container">
+                            <img src="/assets/images/appProvider-code_1.png" alt="AppProvider">
+                            <img src="/assets/images/appProvider-code_2.png" alt="AppProvider">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><code>onChangeLocale</code></td>
+                        <td>function</td>
+                        <td>function lắng nghe sự thay đổi của locales</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="image-container">
+                  <img src="/assets/images/usage-code.png" alt="Usage">
+                  <img src="/assets/images/usage-code_1.png" alt="Usage">
+
+                </div>
+               <p>Sử dụng hook hỗ trợ useI18n để sử dụng đa ngôn ngữ</p>
+                                 <!-- End AppProvider -->
+
+                 <!-- CheckBox -->
+                 <p id="checkbox-component"><strong>CheckBox:</strong> Component checkbox</p>
+
+                 <div class="table-container">
+                   <table class="component-table">
+                     <thead>
+                       <tr>
+                         <th>Property</th>
+                         <th>Type</th>
+                         <th>Mô tả</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td><code>size</code></td>
+                         <td>number(default = 25)</td>
+                         <td>kích thước checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>text</code></td>
+                         <td>string</td>
+                         <td>label của checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>fillColor</code></td>
+                         <td>string(default = #518EFF)</td>
+                         <td>màu của checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>isChecked</code></td>
+                         <td>boolean</td>
+                         <td>giá trị của checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>unfillColor</code></td>
+                         <td>string</td>
+                         <td>màu nền của checkbox khi không được chọn</td>
+                       </tr>
+                       <tr>
+                         <td><code>disableText</code></td>
+                         <td>string</td>
+                         <td>ẩn hiện label của checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>bounceEffect</code></td>
+                         <td>&#123;<br>
+                           value: number<br>
+                           velocity: number<br>
+                           bounciness: number<br>
+                           &#125;</td>
+                         <td>config animation hiệu ứng khi bấm vào checkbox</td>
+                       </tr>
+                       <tr>
+                         <td><code>useNativeDriver</code></td>
+                         <td>boolean(default = true)</td>
+                         <td>sử dụng native để xử lý animation thay vì JS thread</td>
+                       </tr>
+                       <tr>
+                         <td><code>disableBuildInState</code></td>
+                         <td>boolean</td>
+                         <td>sử dụng prop isChecked làm trạng thái của CheckBox thay vì state nội bộ của CheckBox</td>
+                       </tr>
+                       <tr>
+                         <td><code>ImageComponent</code></td>
+                         <td>Image</td>
+                         <td>ảnh của CheckBox khi được chọn</td>
+                       </tr>
+                       <tr>
+                         <td><code>TouchableComponent</code></td>
+                         <td>any component extend Pressable</td>
+                         <td>bất kỳ component nào extend Pressable dù để thay thế (VD : sử dụng TouchSingle ,TouchRipple, TouchAbleOpacity)</td>
+                       </tr>
+                       <tr>
+                         <td><code>textComponent</code></td>
+                         <td>React-Node</td>
+                         <td>thay thế label component của CheckBox</td>
+                       </tr>
+                       <tr>
+                         <td><code>iconStyle</code></td>
+                         <td>StyleProps&#60;ViewStyle&#62;</td>
+                         <td>style cho icon</td>
+                       </tr>
+                       <tr>
+                         <td><code>style</code></td>
+                         <td>StyleProps&#60;ViewStyle&#62;</td>
+                         <td>style cho CheckBox</td>
+                       </tr>
+                       <tr>
+                         <td><code>textStyle</code></td>
+                         <td>StyleProps&#60;TextStyle&#62;</td>
+                         <td>style cho text label</td>
+                       </tr>
+                       <tr>
+                         <td><code>onPress</code></td>
+                         <td>(checked: boolean) => void</td>
+                         <td>hàm được gọi khi bấm vào CheckBox</td>
+                       </tr>
+                       <tr>
+                         <td><code>…props</code></td>
+                         <td>extend BaseTouchableProps</td>
+                         <td>kế thừa tất cả các props của BaseTouchableProps</td>
+                       </tr>
+                     </tbody>
+                   </table>
+                 </div>
+
+                 <div class="image-container">
+                   <div class="double-ui">
+                    <img src="/assets/images/checkbox-code.png" alt="CheckBox">
+                   <img src="/assets/images/checkbox-ui.png" alt="CheckBox">
+                   </div>
+
+                 </div>
+                                   <!-- End CheckBox -->
+
+                  <!-- RadioGroup -->
+                  <p id="radiogroup-component"><strong>RadioGroup:</strong> Component radio button group</p>
+
+                  <div class="table-container">
+                    <table class="component-table">
+                      <thead>
+                        <tr>
+                          <th>Property</th>
+                          <th>Type</th>
+                          <th>Mô tả</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>radioButtons</code></td>
+                          <td>RadioButtonProps[]</td>
+                          <td>RadioButtonProps có các thuộc tính :<br>
+                            id: string<br>
+                            label: string (label của Button)<br>
+                            value: string (giá trị của Button)</td>
+                        </tr>
+                        <tr>
+                          <td><code>onPress</code></td>
+                          <td>(id: string)=> void</td>
+                          <td>được gọi khi Button được chọn</td>
+                        </tr>
+                        <tr>
+                          <td><code>selectedId</code></td>
+                          <td>string</td>
+                          <td>giá trị đang được chọn</td>
+                        </tr>
+                        <tr>
+                          <td><code>layouts</code></td>
+                          <td>row | column(default = column)</td>
+                          <td>radioButtons nằm ngang hoặc dọc</td>
+                        </tr>
+                        <tr>
+                          <td><code>containerStyle</code></td>
+                          <td>StyleProps&#60;ViewStyle&#62;</td>
+                          <td>style cho RadioGroup</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div class="image-container">
+                    <img src="/assets/images/radioGroup-code.png" alt="RadioGroup">
+                    <img src="/assets/images/radioGroup-ui.png" alt="RadioGroup">
+                  </div>
+                                     <!-- End RadioGroup -->
+
+                   <!-- Slider -->
+                   <p id="slider-component"><strong>Slider:</strong> Component Slider</p>
+
+                   <div class="table-container">
+                     <table class="component-table">
+                       <thead>
+                         <tr>
+                           <th>Property</th>
+                           <th>Type</th>
+                           <th>Mô tả</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td><code>minimumValue</code></td>
+                           <td>number(default = 0)</td>
+                           <td>giá trị bắt đầu của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>maximumValue</code></td>
+                           <td>number(default = 1)</td>
+                           <td>giá trị kết thúc của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>value</code></td>
+                           <td>number(default = minimumValue)</td>
+                           <td>giá trị hiện tại của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>step</code></td>
+                           <td>number</td>
+                           <td>bước nhảy khi kéo thanh slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>minimumTrackTintColor</code></td>
+                           <td>string(default = 'white')</td>
+                           <td>màu nền khi kéo qua</td>
+                         </tr>
+                         <tr>
+                           <td><code>maximumTrackTintColor</code></td>
+                           <td>string(default = 'gray')</td>
+                           <td>màu nền của đoạn chưa kéo đến</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbTintColor</code></td>
+                           <td>string(default = '#518EFF')</td>
+                           <td>màu nền của bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>trackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại thanh track</td>
+                         </tr>
+                         <tr>
+                           <td><code>minTrackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại minTrack</td>
+                         </tr>
+                         <tr>
+                           <td><code>maxTrackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại maxTrack</td>
+                         </tr>
+                         <tr>
+                           <td><code>inverted</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>đảo chiều slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>vertical</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>thay đổi main axis của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>enabled</code></td>
+                           <td>boolean(default = true)</td>
+                           <td>bật tắt trạng thái kéo của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>slideOnTap</code></td>
+                           <td>boolean(default = true)</td>
+                           <td>bật tắt tính năng khi click vào thanh slider sẽ kéo đến vị trí đó</td>
+                         </tr>
+                         <tr>
+                           <td><code>trackHeight</code></td>
+                           <td>number(default = 4)</td>
+                           <td>chiều cao của track</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbSize</code></td>
+                           <td>number(default = 15)</td>
+                           <td>kích thước của bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbImage</code></td>
+                           <td>Image</td>
+                           <td>thay thế bóng kéo bằng Image</td>
+                         </tr>
+                         <tr>
+                           <td><code>onValueChange</code></td>
+                           <td>(value: number) => void</td>
+                           <td>được gọi mỗi khi slider value thay đổi</td>
+                         </tr>
+                         <tr>
+                           <td><code>onSlidingStart</code></td>
+                           <td>(value: number) => void</td>
+                           <td>được gọi khi bắt đầu thực hiện hành động kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>onSlidingComplete</code></td>
+                           <td>(value: number) => void</td>
+                           <td>được gọi khi kết thúc hành động kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>CustomThumb</code></td>
+                           <td>Class hoặc Function trả ra View với 2 thuộc tính value: number và thumb : 'min' hoặc 'max'</td>
+                           <td>custom lại bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>…props</code></td>
+                           <td>extends ViewProps</td>
+                           <td>kế thừa tất cả các props của View (VD: onLayout, hitslop)</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+
+                   <div class="image-container">
+                     <div class="double-ui">
+                      <img src="/assets/images/slider-code.png" alt="Slider">
+                     <img src="/assets/images/slider-ui.png" alt="Slider">
+                     </div>
+                   </div>
+                   <!-- End Slider -->
+
+                   <!-- Range-Slider -->
+                   <p id="range-slider-component"><strong>Range-Slider:</strong> Component Range-Slider</p>
+
+                   <div class="table-container">
+                     <table class="component-table">
+                       <thead>
+                         <tr>
+                           <th>Property</th>
+                           <th>Type</th>
+                           <th>Mô tả</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td><code>minimumValue</code></td>
+                           <td>number(default = 0)</td>
+                           <td>giá trị bắt đầu của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>maximumValue</code></td>
+                           <td>number(default = 1)</td>
+                           <td>giá trị kết thúc của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>value</code></td>
+                           <td>number[](default =[minimumValue, minimumValue])</td>
+                           <td>giá trị hiện tại của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>step</code></td>
+                           <td>number</td>
+                           <td>bước nhảy khi kéo thanh slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>outboundColor</code></td>
+                           <td>string(default = 'white')</td>
+                           <td>màu nền bên ngoài range</td>
+                         </tr>
+                         <tr>
+                           <td><code>inboundColor</code></td>
+                           <td>string(default = 'gray')</td>
+                           <td>màu nền bên trong range</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbTintColor</code></td>
+                           <td>string(default = '#518EFF')</td>
+                           <td>màu nền của bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>minTrackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại minTrack</td>
+                         </tr>
+                         <tr>
+                           <td><code>maxTrackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại maxTrack</td>
+                         </tr>
+                         <tr>
+                           <td><code>midTrackStyle</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại midTrack</td>
+                         </tr>
+                         <tr>
+                           <td><code>inverted</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>đảo chiều slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>vertical</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>thay đổi main axis của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>enabled</code></td>
+                           <td>boolean(default = true)</td>
+                           <td>bật tắt trạng thái kéo của slider</td>
+                         </tr>
+                         <tr>
+                           <td><code>slideOnTap</code></td>
+                           <td>boolean(default = true)</td>
+                           <td>bật tắt tính năng khi click vào thanh slider sẽ kéo đến vị trí đó</td>
+                         </tr>
+                         <tr>
+                           <td><code>trackHeight</code></td>
+                           <td>number(default = 4)</td>
+                           <td>chiều cao của track</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbSize</code></td>
+                           <td>number(default = 15)</td>
+                           <td>kích thước của bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>thumbImage</code></td>
+                           <td>Image</td>
+                           <td>thay thế bóng kéo bằng Image</td>
+                         </tr>
+                         <tr>
+                           <td><code>minimumRange</code></td>
+                           <td>number(default = step)</td>
+                           <td>phạm vi tối thiểu</td>
+                         </tr>
+                         <tr>
+                           <td><code>crossingAllowed</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>cho phép kéo quá phạm vi minimumRange</td>
+                         </tr>
+                         <tr>
+                           <td><code>onValueChange</code></td>
+                           <td>(range:[number,number]) => void</td>
+                           <td>được gọi mỗi khi slider value thay đổi</td>
+                         </tr>
+                         <tr>
+                           <td><code>onSlidingStart</code></td>
+                           <td>(range:[number,number]) => void</td>
+                           <td>được gọi khi bắt đầu thực hiện hành động kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>onSlidingComplete</code></td>
+                           <td>(range:[number,number]) => void</td>
+                           <td>được gọi khi kết thúc hành động kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>CustomThumb</code></td>
+                           <td>Class hoặc Function trả ra View với 2 thuộc tính value: number và thumb : 'min' hoặc 'max'</td>
+                           <td>custom lại bóng kéo</td>
+                         </tr>
+                         <tr>
+                           <td><code>…props</code></td>
+                           <td>extends ViewProps</td>
+                           <td>kế thừa tất cả các props của View (VD: onLayout, hitslop)</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+
+                   <div class="image-container">
+                     <div class="double-ui">
+                      <img src="/assets/images/range-slider-code.png" alt="Range Slider">
+                     <img src="/assets/images/range-slider-ui.png" alt="Range Slider">
+                     </div>
+                   </div>
+                   <!-- End Range-Slider -->
+
+                   <!-- AutoScrolling -->
+                   <p id="autoscrolling-component"><strong>AutoScrolling:</strong> Component AutoScrolling</p>
+
+                   <div class="table-container">
+                     <table class="component-table">
+                       <thead>
+                         <tr>
+                           <th>Property</th>
+                           <th>Type</th>
+                           <th>Mô tả</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td><code>style</code></td>
+                           <td>StyleProps&#60;ViewStyle&#62;</td>
+                           <td>style lại AutoScrolling</td>
+                         </tr>
+                         <tr>
+                           <td><code>children</code></td>
+                           <td>React.ReactElement</td>
+                           <td>thành phần bên trong của AutoScrolling<br>có thể là View ,Text</td>
+                         </tr>
+                         <tr>
+                           <td><code>endPaddingWidth</code></td>
+                           <td>number(default = 100)</td>
+                           <td>khoảng cách của content hiện tại và content tiếp theo</td>
+                         </tr>
+                         <tr>
+                           <td><code>duration</code></td>
+                           <td>number</td>
+                           <td>thời gian chạy</td>
+                         </tr>
+                         <tr>
+                           <td><code>delay</code></td>
+                           <td>number(default = 0)</td>
+                           <td>thời gian delay giữa các lần chạy</td>
+                         </tr>
+                         <tr>
+                           <td><code>isLTR</code></td>
+                           <td>boolean(default = false)</td>
+                           <td>hướng chạy của AutoScrolling</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+
+
+                   <!-- End AutoScrolling -->
+
+                   <!-- Mini App API -->
+                   <div id="mini-app-api">
+                     <h4>1.3.2.3. Mini App API</h4>
+                   <p>Mini App API cung cấp các API để nhà phát triển có thể tương tác với Super App. Một số API sẽ yêu cầu nhà phát triển gửi xét duyệt trước khi được sử dụng.</p>
+
+                   <p>Mini App API sẽ được cài tự động khi nhà phát triển tạo mới một Mini App</p>
+
+                   <div class="info-item">
+                     <h5>• Tên thư viện:</h5>
+                     <p>-mini-api (<a href="https://www.npmjs.com/package/-mini-api" class="link-text" target="_blank">https://www.npmjs.com/package/-mini-api</a>)</p>
+                   </div>
+
+                   <div class="info-item">
+                     <h5>• Cài đặt</h5>
+                     <p>Mặc định đã được khai báo trong file package.json trong souce base. Tuy nhiên có thể chưa phải bản mới nhất. Để sử dụng thư viện phiên bản mới nhất vào file package.json xoá dòng -mini-api trong mục dependencies.</p>
+                     <div class="code-block">
+                       <code>yarn add -mini-api</code>
+                     </div>
+                   </div>
+
+                   <div class="info-item">
+                     <h5>• Danh sách các api đang hỗ trợ</h5>
+
+                     <div class="api-section">
+                       <h6>NAVIGATION</h6>
+                       <div class="table-container">
+                         <table class="component-table">
+                           <thead>
+                             <tr>
+                               <th>Tên</th>
+                               <th>Mô tả</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><code>closeMiniApp</code></td>
+                               <td>Close mini app hiện tại</td>
+                             </tr>
+                             <tr>
+                               <td><code>goHome</code></td>
+                               <td>Quay lại màn hình home.</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+
+                     <div class="api-section">
+                       <h6>UTILITIES</h6>
+                       <div class="table-container">
+                         <table class="component-table">
+                           <thead>
+                             <tr>
+                               <th>Tên</th>
+                               <th>Mô tả</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><code>shareContent</code></td>
+                               <td>Chia sẻ content.</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+
+                     <div class="api-section">
+                       <h6>STORAGE</h6>
+                       <div class="table-container">
+                         <table class="component-table">
+                           <thead>
+                             <tr>
+                               <th>Tên</th>
+                               <th>Mô tả</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><code>readData</code></td>
+                               <td>Lấy dữ liệu từ nơi lưu trữ</td>
+                             </tr>
+                             <tr>
+                               <td><code>saveData</code></td>
+                               <td>Đặt dữ liệu tại nơi lưu trữ</td>
+                             </tr>
+                             <tr>
+                               <td><code>deleteData</code></td>
+                               <td>Xóa dữ liệu khỏi nơi lưu trữ</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+
+                     <div class="api-section">
+                       <h6>SCREEN</h6>
+                       <div class="table-container">
+                         <table class="component-table">
+                           <thead>
+                             <tr>
+                               <th>Tên</th>
+                               <th>Mô tả</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><code>showLoading</code></td>
+                               <td>Hiển thị màn hình loading</td>
+                             </tr>
+                             <tr>
+                               <td><code>hideLoading</code></td>
+                               <td>Ẩn màn hình loading</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+
+                     <div class="api-section">
+                       <h6>NETWORK</h6>
+                       <div class="table-container">
+                         <table class="component-table">
+                           <thead>
+                             <tr>
+                               <th>Tên</th>
+                               <th>Mô tả</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><code>requestAPI</code></td>
+                               <td>Gọi Network api</td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                   <!-- End Mini App API -->
+
+                   <!-- Mini CLI -->
+                   <div id="mini-cli">
+                     <h4>1.3.2.4. Mini CLI</h4>
+                     <p>Mini CLI cung cấp các tiện ích và một tập các lệnh như một hệ thống đầy đủ, giúp nhà phát triển có thể tập trung vào việc build Mini App của mình, hỗ trợ phát triển Mini App một cách nhanh chóng.</p>
+
+                     <p>Mini CLI đã được tích hợp sẵn trên Mini App Source base.</p>
+
+                     <div class="table-container">
+                       <table class="component-table">
+                         <thead>
+                           <tr>
+                             <th>Tên lệnh</th>
+                             <th>Mô tả</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td><code>yarn start</code></td>
+                             <td>Chạy server metro</td>
+                           </tr>
+                           <tr>
+                             <td><code>yarn run-android</code></td>
+                             <td>Chạy mini app trên máy Android</td>
+                           </tr>
+                           <tr>
+                             <td><code>yarn run-ios</code></td>
+                             <td>Chạy mini app trên máy IOS</td>
+                           </tr>
+                           <tr>
+                             <td><code>yarn build</code></td>
+                             <td>Build bundle release cho Mini App</td>
+                           </tr>
+                         </tbody>
+                       </table>
+                     </div>
+                   </div>
+                   <!-- End Mini CLI -->
+                 </div>
+               </div>
+            </div>
           </div>
         </div>
-      </section>
 
-    </div>
-
-    <!-- anchor-sidebar -->
-    <div class="anchor-sidebar">
-      <div class="sidebar-header">
-        <h4>Nội dung trong trang</h4>
-      </div>
-      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
-        <nz-link nzHref="#overview" nzTitle="1.1. Tổng quan quy trình phát triển Mini App"></nz-link>
-        <nz-link nzHref="#review-process" nzTitle="1.2. Tổng quan quy trình kiểm duyệt Mini App"></nz-link>
-        <nz-link nzHref="#development-overview" nzTitle="1.3. Tổng quan phát triển"></nz-link>
-      </nz-anchor>
     </div>
   </div>
+  <div class="anchor-sidebar">
+    <div class="sidebar-header">
+      <h4>Nội dung trong trang</h4>
+    </div>
+    <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+      <nz-link nzHref="#overview" nzTitle="1.1. Tổng quan quy trình phát triển Mini App"></nz-link>
+      <nz-link nzHref="#review-process" nzTitle="1.2. Tổng quan quy trình kiểm duyệt Mini App"></nz-link>
+      <nz-link nzHref="#development-overview" nzTitle="1.3. Tổng quan phát triển">
+        <nz-link nzHref="#preparation" nzTitle="1.3.1. Chuẩn bị"></nz-link>
+        <nz-link nzHref="#setup-tools" nzTitle="1.3.2. Thiết lập công cụ và môi trường phát triển">
+          <nz-link nzHref="#source-base" nzTitle="1.3.2.1. Mini App Source Base"></nz-link>
+          <nz-link nzHref="#ui-components" nzTitle="1.3.2.2. UI Component Kits">
+            <nz-link nzHref="#box-component" nzTitle="Box"></nz-link>
+            <nz-link nzHref="#text-component" nzTitle="Text"></nz-link>
+            <nz-link nzHref="#datepicker-component" nzTitle="DatePicker"></nz-link>
+            <nz-link nzHref="#responsive-component" nzTitle="Responsive"></nz-link>
+            <nz-link nzHref="#getoffset-component" nzTitle="getOffset"></nz-link>
+            <nz-link nzHref="#appprovider-component" nzTitle="AppProvider"></nz-link>
+            <nz-link nzHref="#checkbox-component" nzTitle="CheckBox"></nz-link>
+            <nz-link nzHref="#radiogroup-component" nzTitle="RadioGroup"></nz-link>
+            <nz-link nzHref="#slider-component" nzTitle="Slider"></nz-link>
+            <nz-link nzHref="#range-slider-component" nzTitle="Range-Slider"></nz-link>
+            <nz-link nzHref="#autoscrolling-component" nzTitle="AutoScrolling"></nz-link>
+          </nz-link>
+          <nz-link nzHref="#mini-app-api" nzTitle="1.3.2.3. Mini App API"></nz-link>
+          <nz-link nzHref="#mini-cli" nzTitle="1.3.2.4. Mini CLI"></nz-link>
+        </nz-link>
+      </nz-link>
+    </nz-anchor>
+  </div>
 </div>
+</div>
+

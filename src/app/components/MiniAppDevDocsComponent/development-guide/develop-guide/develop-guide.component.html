@@ -1,1 +1,164 @@
-<p>develop-guide works!</p>
+
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content">
+      <h1>Hướng dẫn phát triển</h1>
+
+
+      <div class="steps">
+        <div  class="step-item">
+          <h3 id="step-1">1. Tạo Mini App</h3>
+          <p>Sau khi đăng nhập vào hệ thống  MAC, hệ thống hiển thị màn hình Danh sách App của bạn </p>
+          <div class="image-container">
+            <img src="assets/images/danh-sach-app.png" alt="Tạo Mini App">
+          </div>
+          <p>Nhấn vào <span class="step-item-bold">Thêm ứng dụng</span> để thêm mới app</p>
+
+        </div>
+
+        <div class="step-item">
+          <h3 id="step-2">Màu sắc</h3>
+          <p>Màu sắc là yếu tố quan trọng giúp người dùng nhận diện thương hiệu dễ dàng và hiệu quả. Sự kết hợp màu sắc hài hòa, phù hợp cũng tạo sự thiện cảm và gia tăng trải nghiệm tích cực của người dùng trên ứng dụng.</p>
+            <ul>
+              <div class="step-item-title">
+                <span>Màu chính:</span>
+                <li class="step-item-content">Màu chính sẽ được sử dụng cho:
+                  <ul>
+                    <li>Các thành phần giao diện người dùng bao gồm thanh điều hướng, nút chính, thanh tiến trình, thanh trượt…</li>
+                    <li>Các trạng thái bao gồm: đã chọn (có thể chọn / đã chọn), ô nhập dữ liệu được nhấn mạnh,...</li>
+                  </ul>
+                </li>
+
+                <li class="step-item-content">
+                  Màu chính phải là màu thương hiệu của doanh nghiệp để tạo sự liên tưởng giữa người sử dụng từ  Super App và thương hiệu của đối tác phát triển Mini App.
+                </li>
+                <li class="step-item-content">Không sử dụng màu trùng hoặc tương tự với màu thương hiệu của  Super App.</li>
+                <p>Thang màu chính sử dụng: <span class="step-item-color">#518EFF</span></p>
+              </div>
+
+              <div class="step-item-title">
+                <span>Màu sắc trạng thái:</span>
+                <p>Hệ thống có 5 màu trạng thái để thông báo các trạng thái sau:</p>
+                <ul>
+                 <li>Lỗi: Trạng thái không thành công hoặc thông báo lỗi </li>
+                 <li>Cảnh báo: Trạng thái cần thu hút sự chú ý của người dùng</li>
+                 <li>Thành công: Trạng thái thành công</li>
+                 <li>Thông tin: Trạng thái thông báo về một số thông tin</li>
+                 <li>Trạng thái tắt (làm mờ): Trạng thái làm mờ khi một thành phần không được phép tương tác và cần được hiển thị cho người dùng.</li>
+                </ul>
+                <div class="image-container">
+                  <img src="assets/images/color_1.png" alt="Màu sắc trạng thái">
+                    <img src="assets/images/color_2.png" alt="Màu sắc trạng thái">
+                </div>
+              </div>
+
+            </ul>
+        </div>
+
+        <div class="step-item">
+          <h3 id="step-3">Bố cục và khoảng cách</h3>
+          <p>Sử dụng bố cục chung để tạo sự đồng nhất, ổn định, tạo sự thân thiện và giảm sự khó chịu cho người dùng do thoát trang gây ra</p>
+
+          <div class="step-item-title">
+            <span>Khoảng cách trong bố cục:</span>
+
+            <p>Các nhà phát triển Mini App trên  Mini App cần đáp ứng quy chuẩn chung về khoảng cách, tất cả các khoảng cách đều là bội số của 4 (px).</p>
+
+          </div>
+
+          <div class="step-item-title">
+            <span>Bố cục đầy đủ cột</span>
+
+            <p>Đối với thiết bị di động, khoảng cách giữa viền trái và phải luôn là 16px, khoảng cách giữa các phần tử là 12px.</p>
+
+          </div>
+
+          <div class="step-item-title">
+            <span>Bố cục băng chuyền</span>
+
+            <p>Băng chuyền là dạng giao diện trượt ngang, khoảng cách giữa viền trái và điểm kết thúc của băng chuyền với viền phải là 16px, khoảng cách giữa các phần tử là 12px.</p>
+
+          </div>
+        </div>
+
+<div class="step-item">
+  <h3 id="step-4">Các nút</h3>
+  <p>Nhà phát triển cũng cần đảm bảo các nút được sử dụng trong Mini App đáp ứng các quy chuẩn về màu sắc và bố cục khoảng cách để tạo sự đồng nhất, thân thiện trong quá trình sử dụng của người dùng.</p>
+  <p>Các nút cần thể hiện rõ ràng về màu sắc và định dạng để phân biệt giữa nút thực thi, xác nhận và nút bị vô hiệu hóa.</p>
+    <div class="image-container">
+     <div class="image-grey">
+      <img src="assets/images/button_1.png" alt="Các nút">
+     </div>
+      <img  src="assets/images/button_2.png" alt="Các nút">
+    </div>
+</div>
+
+<div class="step-item">
+  <h3 id="step-5">Các ô nhập dữ liệu</h3>
+  <p class="description">Tương tự với các nút, các ô nhập dữ liệu đầu vào cũng cần đáp ứng quy chuẩn về màu sắc, bố cục khoảng cách và định dạng phân biệt giữa ô được nhập và ô chỉ xem.
+    Tại mỗi ô nhập dữ liệu cần có tiêu đề tên của ô nhập liệu và chuỗi ký tự tạm thời mô tả đặc điểm của thông tin cần nhập liệu.
+    </p>
+
+    <div class="image-container">
+      <img src="assets/images/input_1.png" alt="Các ô nhập dữ liệu">
+
+    </div>
+    <p>Đối với dữ liệu nhập định dạng ngày/tháng/năm, ngoài phương thức nhập dữ liệu thông thường cần có các định dạng hỗ trợ cho phép người dùng có thể tùy chọn nhanh thông tin. </p>
+
+    <div class="image-container">
+      <img src="assets/images/input_2.png" alt="Các ô nhập dữ liệu">
+    </div>
+  </div>
+
+
+  <div class="step-item">
+    <h3 id="step-6">Hình ảnh và icon</h3>
+    <p>Nhà phát triển Mini App cần đảm bảo việc sử dụng một hoặc nhiều hình ảnh phải đáp ứng được bố cục và khoảng cách giữa các hình ảnh đã được định nghĩa ở trên (nguyên tắc 10.3).</p>
+    <p>Bên cạnh đó, các icon được thiết kế và sử dụng cũng cần đảm bảo kích thước của icon không quá to hoặc quá nhỏ so với nội dung và bố cục, tránh làm ảnh hưởng đến điểm nhìn và trải nghiệm của người dùng khi sử dụng các dịch vụ trên ứng dụng.  </p>
+    <p>Tất cả các kích thước của icon cần đảm bảo đều là bội số của 4 (px).</p>
+  </div>
+  <div class="step-item">
+    <h3 id="step-7">Logo thương hiệu</h3>
+    <p>Logo của thương hiệu là điểm tiếp xúc đầu tiên đối với người dùng Mini App. Logo của thương hiệu cần đảm bảo:</p>
+    <ul>
+      <li>Thiết kế đơn giản, dễ nhận biết thương hiệu</li>
+      <li>Không sử dụng hình chụp</li>
+      <li>Tập trung vào một điểm chính trên mỗi biểu tượng</li>
+    </ul>
+
+    <div class="step-item-title">
+      <span>Bố cục khoảng cách trên logo:</span>
+      <ul>
+        <li>Khoảng cách từ viền trên vùng chứa đến hình ảnh biểu tượng là 8px</li>
+        <li>Khoảng cách từ tên dịch vụ đến viền dưới vùng chứa là 8px</li>
+        <li>Khoảng cách giữa hình ảnh biểu tượng và tên dịch vụ là 4px</li>
+        <li>Khoảng cách giữa viền trái và phải là 4px</li>
+        <li>Kích thước yêu cầu của logo là 128x128, độ bo góc (corner) là 50px</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <nz-link nzHref="#step-1" nzTitle="Phông chữ"></nz-link>
+        <nz-link nzHref="#step-2" nzTitle="Màu sắc"></nz-link>
+        <nz-link nzHref="#step-3" nzTitle="Bố cục và khoảng cách"></nz-link>
+        <nz-link nzHref="#step-4" nzTitle="Các nút"></nz-link>
+        <nz-link nzHref="#step-5" nzTitle="Các ô nhập dữ liệu"></nz-link>
+        <nz-link nzHref="#step-6" nzTitle="Hình ảnh và icon"></nz-link>
+        <nz-link nzHref="#step-7" nzTitle="Logo thương hiệu"></nz-link>
+      </nz-anchor>
+    </div>
+  </div>
+</div>

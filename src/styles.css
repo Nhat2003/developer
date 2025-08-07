@@ -183,6 +183,9 @@ img {
   font-size: 1.1rem;
   font-weight: 600;
 }
+.step-item-bold{
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .container {
