@@ -216,6 +216,195 @@ export const routes: Routes = [
       }
     ]
   },
+  // Hướng dẫn xây dựng giao diện Mini App
+ {
+  path: 'ui-guide',
+  data: {
+    breadcrumb: 'Hướng dẫn xây dựng giao diện Mini App'
+  },
+  children: [
+    {
+      path: 'design-standards',
+      loadComponent: () =>
+        import('./components/MiniAppUIBuilderGuideComponent/design-standards/design-standards.component')
+          .then(m => m.DesignStandardsComponent),
+      data: {
+        breadcrumb: 'Quy chuẩn về thiết kế Mini App'
+      }
+    },
+    {
+      path: 'usage-guide',
+      data: {
+        breadcrumb: 'Sử dụng UI Component'
+      },
+      children: [
+        {
+          path: 'button-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/button-component/button-component.component')
+              .then(m => m.ButtonComponentComponent),
+          data: { breadcrumb: 'Button Component' }
+        },
+        {
+          path: 'text-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/text-component/text-component.component')
+              .then(m => m.TextComponentComponent),
+          data: { breadcrumb: 'Text Component' }
+        },
+        {
+          path: 'text-input-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/text-input-component/text-input-component.component')
+              .then(m => m.TextInputComponentComponent),
+          data: { breadcrumb: 'TextInput Component' }
+        },
+        {
+          path: 'image-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/image-component/image-component.component')
+              .then(m => m.ImageComponentComponent),
+          data: { breadcrumb: 'Image Component' }
+        },
+        {
+          path: 'bottom-tab-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/bottom-tab-component/bottom-tab-component.component')
+              .then(m => m.BottomTabComponentComponent),
+          data: { breadcrumb: 'Bottom tab Component' }
+        },
+        {
+          path: 'icon-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/icon-component/icon-component.component')
+              .then(m => m.IconComponentComponent),
+          data: { breadcrumb: 'Icon Component' }
+        },
+        {
+          path: 'toast-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/toast-component/toast-component.component')
+              .then(m => m.ToastComponentComponent),
+          data: { breadcrumb: 'Toast Component' }
+        },
+        {
+          path: 'loading-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/loading-component/loading-component.component')
+              .then(m => m.LoadingComponentComponent),
+          data: { breadcrumb: 'Loading Component' }
+        },
+        {
+          path: 'popup-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/popup-component/popup-component.component')
+              .then(m => m.PopupComponentComponent),
+          data: { breadcrumb: 'Popup Component' }
+        },
+        {
+          path: 'box-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/box-component/box-component.component')
+              .then(m => m.BoxComponentComponent),
+          data: { breadcrumb: 'Box Component' }
+        },
+        {
+          path: 'checkbox-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/checkbox-component/checkbox-component.component')
+              .then(m => m.CheckboxComponentComponent),
+          data: { breadcrumb: 'Checkbox Component' }
+        },
+        {
+          path: 'typography-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/typography-component/typography-component.component')
+              .then(m => m.TypographyComponentComponent),
+          data: { breadcrumb: 'Typography Component' }
+        },
+        {
+          path: 'icons-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/icons-component/icons-component.component')
+              .then(m => m.IconsComponentComponent),
+          data: { breadcrumb: 'Icons Component' }
+        },
+        {
+          path: 'form-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/form-component/form-component.component')
+              .then(m => m.FormComponentComponent),
+          data: { breadcrumb: 'Form Component' }
+        },
+        {
+          path: 'select-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/select-component/select-component.component')
+              .then(m => m.SelectComponentComponent),
+          data: { breadcrumb: 'Select Component' }
+        },
+        {
+          path: 'datepicker-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/datepicker-component/datepicker-component.component')
+              .then(m => m.DatepickerComponentComponent),
+          data: { breadcrumb: 'Datepicker Component' }
+        },
+        {
+          path: 'timepicker-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/timepicker-component/timepicker-component.component')
+              .then(m => m.TimepickerComponentComponent),
+          data: { breadcrumb: 'Timepicker Component' }
+        },
+        {
+          path: 'radio-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/radio-component/radio-component.component')
+              .then(m => m.RadioComponentComponent),
+          data: { breadcrumb: 'Radio Component' }
+        },
+        {
+          path: 'slider-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/slider-component/slider-component.component')
+              .then(m => m.SliderComponentComponent),
+          data: { breadcrumb: 'Slider Component' }
+        },
+        {
+          path: 'range-slider-component',
+          loadComponent: () =>
+            import('./components/MiniAppUIBuilderGuideComponent/usage-guide/range-slider-component/range-slider-component.component')
+              .then(m => m.RangeSliderComponentComponent),
+          data: { breadcrumb: 'RangeSlider Component' }
+        }
+      ]
+    }
+  ]
+},
+
+
+  // Thoả thuận chính sách phát triển Mini App
+  {
+    path: 'policies',
+    data: {
+      breadcrumb: 'Thoả thuận chính sách phát triển Mini App'
+    },
+    children: [
+      { path: 'target', loadComponent: () => import('./components/MiniAppPolicyAgreementComponent/target/target.component')
+      .then(m => m.TargetComponent),
+      data:{
+        breadcrumb: 'Mục tiêu'
+      }
+     },
+      { path: 'agreement', loadComponent: () => import('./components/MiniAppPolicyAgreementComponent/agreement/agreement.component')
+      .then(m => m.AgreementComponent),
+      data:{
+        breadcrumb: 'Thoả thuận'
+      }
+    }
+    ]
+  }
 
 ];
 

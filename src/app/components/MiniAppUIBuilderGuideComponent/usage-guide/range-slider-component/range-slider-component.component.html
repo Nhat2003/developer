@@ -1,0 +1,160 @@
+<div class="container">
+  <div class="content-wrapper">
+    <!-- Nội dung chính -->
+    <div class="content">
+      <h1>Quy chuẩn về thiết kế Mini App</h1>
+
+      <h3>RangeSlider Component</h3>
+      <p>
+        RangeSlider là component tạo giao diện cho phép người dùng chọn khoảng giá trị trong một giới hạn.
+      </p>
+      <p>- Thuộc tính gồm:</p>
+
+      <div class="table-container">
+        <table class="component-table">
+          <thead>
+            <tr>
+              <th>Thuộc tính</th>
+              <th>Kiểu dữ liệu</th>
+              <th>Mô tả</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>minimumValue</code></td>
+              <td>number (default = 0)</td>
+              <td>Giá trị tối thiểu</td>
+            </tr>
+            <tr>
+              <td><code>maximumValue</code></td>
+              <td>number (default = 1)</td>
+              <td>Giá trị tối đa</td>
+            </tr>
+            <tr>
+              <td><code>value</code></td>
+              <td>number (default = minimumValue)</td>
+              <td>Giá trị hiện tại</td>
+            </tr>
+            <tr>
+              <td><code>step</code></td>
+              <td>number</td>
+              <td>Bước nhảy giữa các giá trị</td>
+            </tr>
+            <tr>
+              <td><code>minimumTrackTintColor</code></td>
+              <td>string (default = 'white')</td>
+              <td>Màu của đoạn thanh trước thumb</td>
+            </tr>
+            <tr>
+              <td><code>maximumTrackTintColor</code></td>
+              <td>string (default = 'gray')</td>
+              <td>Màu của đoạn thanh sau thumb</td>
+            </tr>
+            <tr>
+              <td><code>thumbTintColor</code></td>
+              <td>string (default = '#518EFF')</td>
+              <td>Màu thumb</td>
+            </tr>
+            <tr>
+              <td><code>thumbStyle</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho thumb</td>
+            </tr>
+            <tr>
+              <td><code>trackStyle</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho toàn bộ thanh</td>
+            </tr>
+            <tr>
+              <td><code>minTrackStyle</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho phần thanh tối thiểu</td>
+            </tr>
+            <tr>
+              <td><code>maxTrackStyle</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho phần thanh tối đa</td>
+            </tr>
+            <tr>
+              <td><code>inverted</code></td>
+              <td>boolean (default = false)</td>
+              <td>Đảo ngược hướng slider</td>
+            </tr>
+            <tr>
+              <td><code>vertical</code></td>
+              <td>boolean (default = false)</td>
+              <td>Hiển thị slider dọc</td>
+            </tr>
+            <tr>
+              <td><code>enabled</code></td>
+              <td>boolean (default = true)</td>
+              <td>Kích hoạt hoặc vô hiệu slider</td>
+            </tr>
+            <tr>
+              <td><code>slideOnTap</code></td>
+              <td>boolean (default = true)</td>
+              <td>Cho phép di chuyển thumb khi click vào track</td>
+            </tr>
+            <tr>
+              <td><code>trackHeight</code></td>
+              <td>number (default = 4)</td>
+              <td>Chiều cao thanh</td>
+            </tr>
+            <tr>
+              <td><code>thumbSize</code></td>
+              <td>number (default = 15)</td>
+              <td>Kích thước thumb</td>
+            </tr>
+            <tr>
+              <td><code>thumbImage</code></td>
+              <td>Image</td>
+              <td>Ảnh cho thumb</td>
+            </tr>
+            <tr>
+              <td><code>onValueChange</code></td>
+              <td>(value: number) =&gt; void</td>
+              <td>Hàm gọi khi giá trị thay đổi</td>
+            </tr>
+            <tr>
+              <td><code>onSlidingStart</code></td>
+              <td>(value: number) =&gt; void</td>
+              <td>Hàm gọi khi bắt đầu trượt</td>
+            </tr>
+            <tr>
+              <td><code>onSlidingComplete</code></td>
+              <td>(value: number) =&gt; void</td>
+              <td>Hàm gọi khi kết thúc trượt</td>
+            </tr>
+            <tr>
+              <td><code>CustomThumb</code></td>
+              <td>Class | Function</td>
+              <td>Custom thumb với 2 thuộc tính: value, thumb ('min' hoặc 'max')</td>
+            </tr>
+            <tr>
+              <td><code>…props</code></td>
+              <td>extends ViewProps</td>
+              <td>Thuộc tính mở rộng</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Khai báo component</p>
+      <div class="image-container">
+        <img src="/assets/images/usage-guide/rangeslider-component.png" alt="Hình minh họa RangeSlider Component" />
+        <img src="/assets/images/usage-guide/rangeslider-result.png" alt="Hình minh họa RangeSlider Component" />
+        <p class="note-image">Hình: Mẫu kết quả RangeSlider component</p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <!-- Các anchor link -->
+      </nz-anchor>
+    </div>
+  </div>
+</div>

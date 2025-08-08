@@ -111,9 +111,34 @@ export class SidebarComponent implements OnInit {
       icon: 'down',
       isOpen: false,
       children: [
-        { label: 'Analytics', key: 'analytics', routerLink: '/ui-guide/analytics' },
-        { label: 'Push Notifications', key: 'push-notifications', routerLink: '/ui-guide/push-notifications' },
-        { label: 'Payment Integration', key: 'payment-integration', routerLink: '/ui-guide/payment-integration' }
+        { label: 'Quy chuẩn về thiết kế Mini App', key: 'design-standards', routerLink: '/ui-guide/design-standards' },
+        { label: 'Sử dụng UI Components',
+          key: 'usage-guide',
+          children: [
+            { label: 'Button Component', key: 'button-component', routerLink: '/ui-guide/usage-guide/button-component' },
+            { label: 'Text Component', key: 'text-component', routerLink: '/ui-guide/usage-guide/text-component' },
+            { label: 'TextInput Component', key: 'text-input-component', routerLink: '/ui-guide/usage-guide/text-input-component' },
+            { label: 'Image Component', key: 'image-component', routerLink: '/ui-guide/usage-guide/image-component' },
+            { label: 'Bottom tab Component', key: 'bottom-tab-component', routerLink: '/ui-guide/usage-guide/bottom-tab-component' },
+            { label: 'Icon Component', key: 'icon-component', routerLink: '/ui-guide/usage-guide/icon-component' },
+            { label: 'Toast Component', key: 'toast-component', routerLink: '/ui-guide/usage-guide/toast-component' },
+            { label: 'Loading Component', key: 'loading-component', routerLink: '/ui-guide/usage-guide/loading-component' },
+            { label: 'Popup Component', key: 'popup-component', routerLink: '/ui-guide/usage-guide/popup-component' },
+            { label: 'Box Component', key: 'box-component', routerLink: '/ui-guide/usage-guide/box-component' },
+            { label: 'Checkbox Component', key: 'checkbox-component', routerLink: '/ui-guide/usage-guide/checkbox-component' },
+            { label: 'Typography Component', key: 'typography-component', routerLink: '/ui-guide/usage-guide/typography-component' },
+            { label: 'Icons Component', key: 'icons-component', routerLink: '/ui-guide/usage-guide/icons-component' },
+            { label: 'Form Component', key: 'form-component', routerLink: '/ui-guide/usage-guide/form-component' },
+            { label: 'Select Component', key: 'select-component', routerLink: '/ui-guide/usage-guide/select-component' },
+            { label: 'Datepicker Component', key: 'datepicker-component', routerLink: '/ui-guide/usage-guide/datepicker-component' },
+            { label: 'Timepicker Component', key: 'timepicker-component', routerLink: '/ui-guide/usage-guide/timepicker-component' },
+            { label: 'Radio Component', key: 'radio-component', routerLink: '/ui-guide/usage-guide/radio-component' },
+            { label: 'Slider Component', key: 'slider-component', routerLink: '/ui-guide/usage-guide/slider-component' },
+            { label: 'RangeSlider Component', key: 'range-slider-component', routerLink: '/ui-guide/usage-guide/range-slider-component' },
+          ],
+
+         }
+
       ]
     },
     {
@@ -121,9 +146,9 @@ export class SidebarComponent implements OnInit {
       icon: 'down',
       isOpen: false,
       children: [
-        { label: 'Performance', key: 'performance', routerLink: '/policies/performance' },
-        { label: 'Security', key: 'security', routerLink: '/policies/security' },
-        { label: 'User Experience', key: 'user-experience', routerLink: '/policies/user-experience' }
+        { label: 'Mục tiêu', key: 'target', routerLink: '/policies/target' },
+        { label: 'Thoả thuận', key: 'agreement', routerLink: '/policies/agreement' },
+
       ]
     }
   ];

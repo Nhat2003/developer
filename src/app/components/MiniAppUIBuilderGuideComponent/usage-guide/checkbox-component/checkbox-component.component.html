@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="content-wrapper">
+    <!-- Nội dung chính -->
+    <div class="content">
+      <h1>Quy chuẩn về thiết kế Mini App</h1>
+
+      <h3>Checkbox Component</h3>
+      <p>
+        Checkbox là component dùng để chọn một hoặc nhiều mục nằm trong nhóm lựa chọn.
+      </p>
+      <p>- Thuộc tính gồm:</p>
+
+      <div class="table-container">
+        <table class="component-table">
+          <thead>
+            <tr>
+              <th>Thuộc tính</th>
+              <th>Kiểu dữ liệu</th>
+              <th>Mô tả</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>size</code></td>
+              <td>number (default = 25)</td>
+              <td>Kích thước checkbox</td>
+            </tr>
+            <tr>
+              <td><code>text</code></td>
+              <td>string</td>
+              <td>Văn bản hiển thị</td>
+            </tr>
+            <tr>
+              <td><code>fillColor</code></td>
+              <td>string (default = #518EFF)</td>
+              <td>Màu nền khi được chọn</td>
+            </tr>
+            <tr>
+              <td><code>isChecked</code></td>
+              <td>boolean</td>
+              <td>Trạng thái đã chọn hay chưa</td>
+            </tr>
+            <tr>
+              <td><code>unfillColor</code></td>
+              <td>string</td>
+              <td>Màu nền khi chưa chọn</td>
+            </tr>
+            <tr>
+              <td><code>disableText</code></td>
+              <td>string</td>
+              <td>Văn bản khi checkbox bị vô hiệu</td>
+            </tr>
+            <tr>
+              <td><code>bounceEffect</code></td>
+              <td>{{'{'}} value, velocity, bounciness {{'}'}}</td>
+              <td>Hiệu ứng bật khi click</td>
+            </tr>
+            <tr>
+              <td><code>useNativeDriver</code></td>
+              <td>boolean (default = true)</td>
+              <td>Sử dụng native driver để tối ưu animation</td>
+            </tr>
+            <tr>
+              <td><code>disableBuildInState</code></td>
+              <td>boolean</td>
+              <td>Vô hiệu hoá state mặc định</td>
+            </tr>
+            <tr>
+              <td><code>ImageComponent</code></td>
+              <td>Image</td>
+              <td>Component hình ảnh hiển thị</td>
+            </tr>
+            <tr>
+              <td><code>TouchableComponent</code></td>
+              <td>Component extends Pressable</td>
+              <td>Component nhận sự kiện nhấn</td>
+            </tr>
+            <tr>
+              <td><code>textComponent</code></td>
+              <td>ReactNode</td>
+              <td>Component custom hiển thị text</td>
+            </tr>
+            <tr>
+              <td><code>iconStyle</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho icon</td>
+            </tr>
+            <tr>
+              <td><code>style</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style container checkbox</td>
+            </tr>
+            <tr>
+              <td><code>textStyle</code></td>
+              <td>StyleProps&lt;TextStyle&gt;</td>
+              <td>Style cho text</td>
+            </tr>
+            <tr>
+              <td><code>onPress</code></td>
+              <td>(checked: boolean) =&gt; void</td>
+              <td>Hàm gọi khi click</td>
+            </tr>
+            <tr>
+              <td><code>…props</code></td>
+              <td>BaseTouchableProps</td>
+              <td>Thuộc tính mở rộng</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Khai báo component</p>
+      <div class="image-container">
+        <img src="/assets/images/usage-guide/checkbox-component.png" alt="Hình minh họa Checkbox Component" />
+        <img src="/assets/images/usage-guide/checkbox-result.png" alt="Hình minh họa Checkbox Component" />
+        <p class="note-image">Hình: Mẫu kết quả Checkbox component</p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <!-- Các anchor link -->
+      </nz-anchor>
+    </div>
+  </div>
+</div>

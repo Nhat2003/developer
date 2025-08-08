@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="content-wrapper">
+    <!-- Nội dung chính -->
+    <div class="content">
+      <h1>Quy chuẩn về thiết kế Mini App</h1>
+
+      <h3>Icons Component</h3>
+      <p>
+        Icons là component được sử dụng cho việc hiển thị icon trong Mini App.
+      </p>
+      <p>- Thuộc tính gồm:</p>
+
+      <div class="table-container">
+        <table class="component-table">
+          <thead>
+            <tr>
+              <th>Thuộc tính</th>
+              <th>Kiểu dữ liệu</th>
+              <th>Mô tả</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>style</code></td>
+              <td>StyleProps&lt;ViewStyle&gt;</td>
+              <td>Style cho icon</td>
+            </tr>
+            <tr>
+              <td><code>source</code></td>
+              <td>string</td>
+              <td>Đường dẫn hoặc tên icon</td>
+            </tr>
+            <tr>
+              <td><code>size</code></td>
+              <td>'tiny' | 'small' | 'medium' | 'large'</td>
+              <td>Kích thước icon</td>
+            </tr>
+            <tr>
+              <td><code>component</code></td>
+              <td>object</td>
+              <td>Custom component để hiển thị icon</td>
+            </tr>
+            <tr>
+              <td><code>iconContainerStyle</code></td>
+              <td>string</td>
+              <td>Style cho container chứa icon</td>
+            </tr>
+            <tr>
+              <td><code>title</code></td>
+              <td>Number | {{'{'}} url: string {{'}'}}</td>
+              <td>Tiêu đề hoặc ảnh tiêu đề cho icon</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Khai báo component</p>
+      <div class="image-container">
+        <img src="/assets/images/usage-guide/icons-component.png" alt="Hình minh họa Icons Component" />
+        <p class="note-image">Hình: Mẫu kết quả Icons component</p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <!-- Các anchor link -->
+      </nz-anchor>
+    </div>
+  </div>
+</div>

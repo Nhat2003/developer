@@ -298,6 +298,7 @@
 
 .section-children.expanded {
   max-height: 600px;
+
 }
 
 .menu-item {
@@ -384,6 +385,7 @@
 
 .submenu-children.expanded {
   max-height: 400px;
+  overflow: auto;
 }
 
 .submenu-item {

@@ -68,7 +68,7 @@
 
     <div class="sidebar-menu">
       <div class="menu-section" *ngFor="let section of sidebarMenuItems; let i = index">
-        <!-- Section Header -->
+   
         <div class="section-header" (click)="toggleSection(i)">
           <span class="section-title">{{ section.title }}</span>
           <span nz-icon [nzType]="section.isOpen ? 'up' : 'down'" class="section-icon">

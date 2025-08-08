@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="content-wrapper">
     <div class="content">
@@ -6,144 +5,134 @@
 
 
       <div class="steps">
-        <div  class="step-item">
-          <h3 id="step-1">1. Tạo Mini App</h3>
-          <p>Sau khi đăng nhập vào hệ thống  MAC, hệ thống hiển thị màn hình Danh sách App của bạn </p>
-          <div class="image-container">
-            <img src="assets/images/danh-sach-app.png" alt="Tạo Mini App">
-          </div>
-          <p>Nhấn vào <span class="step-item-bold">Thêm ứng dụng</span> để thêm mới app</p>
-
-        </div>
-
         <div class="step-item">
-          <h3 id="step-2">Màu sắc</h3>
-          <p>Màu sắc là yếu tố quan trọng giúp người dùng nhận diện thương hiệu dễ dàng và hiệu quả. Sự kết hợp màu sắc hài hòa, phù hợp cũng tạo sự thiện cảm và gia tăng trải nghiệm tích cực của người dùng trên ứng dụng.</p>
-            <ul>
-              <div class="step-item-title">
-                <span>Màu chính:</span>
-                <li class="step-item-content">Màu chính sẽ được sử dụng cho:
-                  <ul>
-                    <li>Các thành phần giao diện người dùng bao gồm thanh điều hướng, nút chính, thanh tiến trình, thanh trượt…</li>
-                    <li>Các trạng thái bao gồm: đã chọn (có thể chọn / đã chọn), ô nhập dữ liệu được nhấn mạnh,...</li>
-                  </ul>
-                </li>
+          <h3 id="step-1">1. Tạo Mini App</h3>
+          <div class="create-app" id="create-app">
+            <h5>Tạo ứng dụng</h5>
+            <p>Sau khi đăng nhập vào hệ thống MAC, hệ thống hiển thị màn hình Danh sách App của bạn </p>
+            <div class="image-container">
+              <img src="assets/images/danh-sach-app.png" alt="Tạo Mini App">
+            </div>
+            <p>Nhấn vào <span class="step-item-bold">Thêm ứng dụng</span> để thêm mới app</p>
+            <div class="image-container">
+              <img src="assets/images/add-new-app.png" alt="Thêm ứng dụng">
+            </div>
+            <p>Nhập thông tin ứng dụng cần thêm mới và nhấn nút <span class="step-item-bold">Lưu thông tin</span> để
+              hoàn thành.</p>
+          </div>
 
-                <li class="step-item-content">
-                  Màu chính phải là màu thương hiệu của doanh nghiệp để tạo sự liên tưởng giữa người sử dụng từ  Super App và thương hiệu của đối tác phát triển Mini App.
-                </li>
-                <li class="step-item-content">Không sử dụng màu trùng hoặc tương tự với màu thương hiệu của  Super App.</li>
-                <p>Thang màu chính sử dụng: <span class="step-item-color">#518EFF</span></p>
-              </div>
+          <div class="create-mini-app" id="create-mini-app">
+            <h5>Tạo Mini App</h5>
+            <p>Nhấn chọn ứng dụng vừa tạo mới để truy cập danh sách Mini App thuộc ứng dụng</p>
+            <div class="image-container">
+              <img src="assets/images/create-mini-app.png" alt="Tạo Mini App">
+            </div>
+            <p>Nhấn chọn <span class="step-item-bold">Tạo Mini App</span> để thêm mới Mini App </p>
+            <div class="image-container">
+              <img src="assets/images/fill-info.png" alt="Tạo Mini App">
+            </div>
+            <p>Nhập thông tin Mini App cần thêm mới và nhấn nút <span class="step-item-bold">Lưu thông tin</span> để
+              hoàn thành.</p>
+          </div>
 
-              <div class="step-item-title">
-                <span>Màu sắc trạng thái:</span>
-                <p>Hệ thống có 5 màu trạng thái để thông báo các trạng thái sau:</p>
+          <div class="step-item">
+            <h3 id="step-2">2. Xây dựng Mini App</h3>
+            <h5>Thiết lập Mini App</h5>
+            <p>Thiết lập cấu hình công cụ và môi trường phát triển, chi tiết <a [routerLink]=""
+                routerLinkActive="router-link-active">tại đây</a></p>
+            <div class="create-version-mini-app" id="create-version-mini-app">
+              <h5>Tạo phiên bản Mini App</h5>
+              <ul>
+                <li>Bước 1: Tại danh sách Mini App, chọn Mini App cần thêm phiên bản</li>
+                <div class="image-container">
+                  <img src="assets/images/select-mini-app.png" alt="Chọn phiên bản Mini App">
+                </div>
+                <li>Bước 2: Tại Menu trái, chọn <span class="step-item-bold">Quản lý phiên bản</span></li>
+                <div class="image-container">
+                  <img src="assets/images/version-manager.png" alt="Quản lí phiên bản Mini App">
+                </div>
+                <li>Bước 3: Chọn <span class="step-item-bold">Tạo phiên bản mới</span></li>
+                <div class="image-container">
+                  <img src="assets/images/create-new-version.png" alt="Tạo phiên bản mới">
+                </div>
+                <li>Bước 4: : Nhập thông tin cho phiên bản mới và upload file Resource của Mini App phiên bản mới.</li>
+                <p>Lưu ý: </p>
                 <ul>
-                 <li>Lỗi: Trạng thái không thành công hoặc thông báo lỗi </li>
-                 <li>Cảnh báo: Trạng thái cần thu hút sự chú ý của người dùng</li>
-                 <li>Thành công: Trạng thái thành công</li>
-                 <li>Thông tin: Trạng thái thông báo về một số thông tin</li>
-                 <li>Trạng thái tắt (làm mờ): Trạng thái làm mờ khi một thành phần không được phép tương tác và cần được hiển thị cho người dùng.</li>
+                  <li>File Resource phải là file có định dạng được compile từ hệ thống Media Super App</li>
+                  <div class="image-container">
+                    <img src="assets/images/four-file.png" alt="Quản lí phiên bản Mini App">
+                    <span class="italic-text">4 file định dạng được compile từ hệ thống  Media Super App</span>
+                  </div>
+                  <li>Truy cập file app.json để lấy thông tin Bundle và Module, trong đó:
+                    <ul>
+                      <li>Bundle được lấy dữ liệu từ trường bundleId tại file app.json</li>
+                      <li>Module được lấy dữ liệu từ trường inputFile tại file app.json</li>
+                    </ul>
+                  </li>
+                  <div class="image-container">
+                    <img src="assets/images/save-version.png" alt="Lưu">
+                  </div>
+
+                </ul>
+                 <li>Bước 5: Chọn <span class="step-item-bold">Lưu lại</span> lại để xác nhận lưu phiên bản mới cho Mini App</li>
+
+              </ul>
+            </div>
+
+          </div>
+
+
+
+          <div class="step-item">
+            <h3 id="step-3">Test Mini App</h3>
+            <ul>
+              <li>Bước 1: Tại danh sách phiên bản Mini App, chọn <span class="step-item-bold">Gửi xét duyệt</span> tại phiên bản vừa tạo mới thành công</li>
+                <div class="image-container">
+                    <img src="assets/images/click-send.png" alt="Gửi xét duyệt">
+                  </div>
+
+               <li>Bước 2: Nhập thông tin xét duyệt và chọn <span class="step-item-bold">Gửi xét duyệt</span>
+                <div class="image-container">
+                    <img src="assets/images/click-send_2.png" alt="Gửi xét duyệt">
+                  </div>
+              </li>
+               <li>Bước 3: Người kiểm duyệt truy cập  Super App, chọn tính năng  <span class="step-item-bold">Quét mã QR </span>
+                <div class="image-container">
+                    <img src="assets/images/scan-qr.png" alt="Quét mã QR">
+                  </div>
+              </li>
+              <li>Bước 4: Di chuyển camera của  Super App đến mã QR của phiên bản Mini App cần kiểm duyệt trên  Mini App Center và thực hiện quét mã</li>
+              <li>Bước 5: Người kiểm duyệt tiến hành kiểm duyệt Mini App
+                <ul>
+                  <li>Trường hợp 1: Người kiểm duyệt phát hiện lỗi trên Mini App, thực hiện <span class="step-item-bold">Từ chối duyệt</span> Mini App trên  Mini App Center → hệ thống  Mini App Center sẽ gửi thông báo đến nhà phát triển. Nhà phát triển thực hiện vá lỗi và gửi xét duyệt lại cho Mini App</li>
+                  <li>Trường hợp 2: Mini App không xảy ra lỗi, người kiểm duyệt thực hiện  <span class="step-item-bold">Phê duyệt</span> Mini App trên  Mini App Center → hệ thống  Mini App Center gửi thông báo đến nhà phát triển</li>
+
+                </ul>
+              </li>
+              <li>Bước 6: Đối với phiên bản Mini App ở trạng thái Đã phê duyệt, hệ thống  Mini App Center cho phép nhà phát triển thực hiện phát hành phiên bản Mini App lên hệ thống  Super App bằng cách chọn <span class="step-item-bold">Xuất bản phiên bản này</span>
+                 <div class="image-container">
+                    <img src="assets/images/export-version.png" alt="Xuất phiên bản">
+                  </div>
+              </li>
+              <li>Bước 7: hệ thống hiển thị alert thông báo xác nhận chắc chắn muốn xuất bản phiên bản Mini App
+                <ul>
+                  <li>Trường hợp 1: chọn <span class="step-item-bold">Huỷ</span> đề huỷ thao tác xuất bản</li>
+                  <li>Trường hợp 2: chọn <span class="step-item-bold">OK</span> để xác nhận xuất bản phiên bản Mini App lên  Super App</li>
                 </ul>
                 <div class="image-container">
-                  <img src="assets/images/color_1.png" alt="Màu sắc trạng thái">
-                    <img src="assets/images/color_2.png" alt="Màu sắc trạng thái">
-                </div>
-              </div>
-
+                    <img src="assets/images/confirm-alert.png" alt="Thông báo">
+                  </div>
+              </li>
             </ul>
-        </div>
-
-        <div class="step-item">
-          <h3 id="step-3">Bố cục và khoảng cách</h3>
-          <p>Sử dụng bố cục chung để tạo sự đồng nhất, ổn định, tạo sự thân thiện và giảm sự khó chịu cho người dùng do thoát trang gây ra</p>
-
-          <div class="step-item-title">
-            <span>Khoảng cách trong bố cục:</span>
-
-            <p>Các nhà phát triển Mini App trên  Mini App cần đáp ứng quy chuẩn chung về khoảng cách, tất cả các khoảng cách đều là bội số của 4 (px).</p>
-
           </div>
-
-          <div class="step-item-title">
-            <span>Bố cục đầy đủ cột</span>
-
-            <p>Đối với thiết bị di động, khoảng cách giữa viền trái và phải luôn là 16px, khoảng cách giữa các phần tử là 12px.</p>
-
-          </div>
-
-          <div class="step-item-title">
-            <span>Bố cục băng chuyền</span>
-
-            <p>Băng chuyền là dạng giao diện trượt ngang, khoảng cách giữa viền trái và điểm kết thúc của băng chuyền với viền phải là 16px, khoảng cách giữa các phần tử là 12px.</p>
-
-          </div>
-        </div>
-
-<div class="step-item">
-  <h3 id="step-4">Các nút</h3>
-  <p>Nhà phát triển cũng cần đảm bảo các nút được sử dụng trong Mini App đáp ứng các quy chuẩn về màu sắc và bố cục khoảng cách để tạo sự đồng nhất, thân thiện trong quá trình sử dụng của người dùng.</p>
-  <p>Các nút cần thể hiện rõ ràng về màu sắc và định dạng để phân biệt giữa nút thực thi, xác nhận và nút bị vô hiệu hóa.</p>
-    <div class="image-container">
-     <div class="image-grey">
-      <img src="assets/images/button_1.png" alt="Các nút">
-     </div>
-      <img  src="assets/images/button_2.png" alt="Các nút">
-    </div>
-</div>
-
-<div class="step-item">
-  <h3 id="step-5">Các ô nhập dữ liệu</h3>
-  <p class="description">Tương tự với các nút, các ô nhập dữ liệu đầu vào cũng cần đáp ứng quy chuẩn về màu sắc, bố cục khoảng cách và định dạng phân biệt giữa ô được nhập và ô chỉ xem.
-    Tại mỗi ô nhập dữ liệu cần có tiêu đề tên của ô nhập liệu và chuỗi ký tự tạm thời mô tả đặc điểm của thông tin cần nhập liệu.
-    </p>
-
-    <div class="image-container">
-      <img src="assets/images/input_1.png" alt="Các ô nhập dữ liệu">
-
-    </div>
-    <p>Đối với dữ liệu nhập định dạng ngày/tháng/năm, ngoài phương thức nhập dữ liệu thông thường cần có các định dạng hỗ trợ cho phép người dùng có thể tùy chọn nhanh thông tin. </p>
-
-    <div class="image-container">
-      <img src="assets/images/input_2.png" alt="Các ô nhập dữ liệu">
-    </div>
-  </div>
-
-
-  <div class="step-item">
-    <h3 id="step-6">Hình ảnh và icon</h3>
-    <p>Nhà phát triển Mini App cần đảm bảo việc sử dụng một hoặc nhiều hình ảnh phải đáp ứng được bố cục và khoảng cách giữa các hình ảnh đã được định nghĩa ở trên (nguyên tắc 10.3).</p>
-    <p>Bên cạnh đó, các icon được thiết kế và sử dụng cũng cần đảm bảo kích thước của icon không quá to hoặc quá nhỏ so với nội dung và bố cục, tránh làm ảnh hưởng đến điểm nhìn và trải nghiệm của người dùng khi sử dụng các dịch vụ trên ứng dụng.  </p>
-    <p>Tất cả các kích thước của icon cần đảm bảo đều là bội số của 4 (px).</p>
-  </div>
-  <div class="step-item">
-    <h3 id="step-7">Logo thương hiệu</h3>
-    <p>Logo của thương hiệu là điểm tiếp xúc đầu tiên đối với người dùng Mini App. Logo của thương hiệu cần đảm bảo:</p>
-    <ul>
-      <li>Thiết kế đơn giản, dễ nhận biết thương hiệu</li>
-      <li>Không sử dụng hình chụp</li>
-      <li>Tập trung vào một điểm chính trên mỗi biểu tượng</li>
-    </ul>
-
-    <div class="step-item-title">
-      <span>Bố cục khoảng cách trên logo:</span>
-      <ul>
-        <li>Khoảng cách từ viền trên vùng chứa đến hình ảnh biểu tượng là 8px</li>
-        <li>Khoảng cách từ tên dịch vụ đến viền dưới vùng chứa là 8px</li>
-        <li>Khoảng cách giữa hình ảnh biểu tượng và tên dịch vụ là 4px</li>
-        <li>Khoảng cách giữa viền trái và phải là 4px</li>
-        <li>Kích thước yêu cầu của logo là 128x128, độ bo góc (corner) là 50px</li>
-      </ul>
-    </div>
-  </div>
-
-
-
 
 
 
         </div>
+      </div>
+
+
+      <!--End step -->
     </div>
 
     <div class="anchor-sidebar">
@@ -151,13 +140,12 @@
         <h4>Nội dung trong trang</h4>
       </div>
       <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
-        <nz-link nzHref="#step-1" nzTitle="Phông chữ"></nz-link>
-        <nz-link nzHref="#step-2" nzTitle="Màu sắc"></nz-link>
-        <nz-link nzHref="#step-3" nzTitle="Bố cục và khoảng cách"></nz-link>
-        <nz-link nzHref="#step-4" nzTitle="Các nút"></nz-link>
-        <nz-link nzHref="#step-5" nzTitle="Các ô nhập dữ liệu"></nz-link>
-        <nz-link nzHref="#step-6" nzTitle="Hình ảnh và icon"></nz-link>
-        <nz-link nzHref="#step-7" nzTitle="Logo thương hiệu"></nz-link>
+        <nz-link nzHref="#step-1" nzTitle="1. Tạo Mini App"></nz-link>
+        <nz-link nzHref="#create-app" nzTitle="Tạo ứng dụng"></nz-link>
+        <nz-link nzHref="#create-mini-app" nzTitle="Tạo Mini App"></nz-link>
+        <nz-link nzHref="#step-2" nzTitle="2. Xây dựng Mini App"></nz-link>
+        <nz-link nzHref="#create-version-mini-app" nzTitle="Tạo phiên bản Mini App"></nz-link>
+        <nz-link nzHref="#step-3" nzTitle="3. Test Mini App"></nz-link>
       </nz-anchor>
     </div>
   </div>

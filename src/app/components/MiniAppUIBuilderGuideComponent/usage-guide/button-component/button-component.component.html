@@ -1,0 +1,134 @@
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content">
+      <h1>Quy chuẩn về thiết kế Mini App</h1>
+      <h3>Button Component</h3>
+      <p>Button thể hiện hành động mà người dùng có thể thực hiện trên UI, gồm có 2 loại:</p>
+      <ul>
+        <li>Label button: là button chứa tiêu đề thể hiện hành động mà người dùng có thể thực hiện trên UI
+          <div class="image-container">
+            <img src="/assets/images/usage-guide/button-label.png" alt="Label Button">
+            <p class="note-image">Hình: Label button</p>
+          </div>
+        </li>
+        <li>Icon button: là button chỉ chứa icon, icon hiển thị thể hiện được hành động mà người dùng có thể thực hiện
+          trên UI
+          <div class="image-container">
+            <img src="/assets/images/usage-guide/icon-button.png" alt="Icon Button">
+            <p class="note-image">Hình: Icon button</p>
+          </div>
+        </li>
+        <li>Button component chứa các thuộc tính:</li>
+        <div class="table-container">
+          <table class="component-table">
+            <thead>
+              <tr>
+                <th>Tên thuộc tính</th>
+                <th>Kiểu dữ liệu</th>
+                <th>Mô tả</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>extend PressableProps</code></td>
+                <td>any</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><code>delay</code></td>
+                <td>number</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><code>padding</code></td>
+                <td>NumberOrString
+                  hoặc
+                  NumberOrString []
+                </td>
+                <td>Kích thước của button</td>
+              </tr>
+              <tr>
+                <td><code>paddingHorizontal</code></td>
+                <td>number hoặc string
+                </td>
+                <td>Khoảng cách ngang giữa button</td>
+              </tr>
+              <tr>
+                <td><code>paddingVertical</code></td>
+                <td>number hoặc string
+                </td>
+                <td>Khoảng cách dọc giữa button</td>
+              </tr>
+              <tr>
+                <td><code>paddingHorizontal</code></td>
+                <td>number hoặc string
+                </td>
+                <td>Khoảng cách ngang giữa button</td>
+              </tr>
+              <tr>
+                <td><code>paddingBottom</code></td>
+                <td>number hoặc string
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><code>number hoặc string</code></td>
+                <td>number hoặc string
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><code>paddingLeft</code></td>
+                <td>number hoặc string
+                </td>
+                <td>Khoảng cách button với lề trái</td>
+              </tr>
+              <tr>
+                <td><code>paddingRight</code></td>
+                <td>number hoặc string
+                </td>
+                <td>Khoảng cách button với lề phải</td>
+              </tr>
+              <tr>
+                <td><code>margin</code></td>
+                <td>NumberOrString
+                  hoặc
+                  NumberOrString []
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><code>number hoặc string</code></td>
+                <td>number hoặc string
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <li>Khai báo component
+          <div class="image-container">
+            <img src="/assets/images/usage-guide/declaration-button.png" alt="Khai báo component">
+            <p class="note-image">Hình: Mẫu khai báo component</p>
+            <img src="/assets/images/usage-guide/result-button.png" alt="Khai báo component">
+            <p class="note-image">Hình: Mẫu kết quả button sử dụng component</p>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="anchor-sidebar">
+      <div class="sidebar-header">
+        <h4>Nội dung trong trang</h4>
+      </div>
+      <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
+        <!-- <nz-link nzHref="#purpose" nzTitle=" Giới thiệu"></nz-link>
+        <nz-link nzHref="#purpose" nzTitle="I. Mục đích"></nz-link>
+        <nz-link nzHref="#purpose" nzTitle="II. Phạm vi tài liệu"></nz-link>
+        <nz-link nzHref="#purpose" nzTitle="III. Bảng thuật ngữ viết tắt"></nz-link> -->
+      </nz-anchor>
+    </div>
+  </div>
+</div>

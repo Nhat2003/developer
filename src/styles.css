@@ -13,6 +13,7 @@
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  max-width: 1400px;
 }
 
 
@@ -126,10 +127,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+.double-ui{
+  display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-bottom: 20px;
+}
 
 .image-container img {
   max-width: 100%;
-  height: auto;
+  height: 600px;
   border-radius: 8px;
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 
@@ -166,9 +173,11 @@ img {
   width: 280px;
   position: sticky;
   top: 65px;
-  height: fit-content;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
   align-self: flex-start;
 }
+
 
 
 .sidebar-header {
@@ -185,6 +194,53 @@ img {
 }
 .step-item-bold{
   font-weight: bold;
+}
+.note-image{
+  font-style: italic;
+  font-size: 13px;
+  color: #000;
+}
+.component-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.component-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.component-table th {
+  color: white;
+  font-weight: 600;
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.component-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #595959;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.component-table tr:last-child td {
+  border-bottom: none;
+}
+.component-table code {
+  background: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: #e83e8c;
 }
 
 @media (max-width: 768px) {
