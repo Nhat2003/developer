@@ -2,3 +2,6 @@
   font-style: italic;
   color: #888;
 }
+.image-container img{
+  max-height: 500px!important;
+}

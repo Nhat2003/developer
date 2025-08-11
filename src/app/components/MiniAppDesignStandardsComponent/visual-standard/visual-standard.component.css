@@ -12,3 +12,6 @@
   filter: contrast(1.15) brightness(1.08) saturate(1.2);
 }
 
+.image-container img{
+  height: 650px;
+}

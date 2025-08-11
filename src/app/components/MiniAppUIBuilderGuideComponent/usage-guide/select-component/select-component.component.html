@@ -4,7 +4,7 @@
     <div class="content">
       <h1>Quy chuẩn về thiết kế Mini App</h1>
 
-      <h3>Select Component</h3>
+      <h3 id="step-1">Select Component</h3>
       <p>
         Select là component dùng để chọn một hoặc nhiều giá trị trong nhóm các lựa chọn.
       </p>
@@ -90,12 +90,13 @@
     </div>
 
     <!-- Sidebar -->
-    <div class="anchor-sidebar">
+     <div class="anchor-sidebar">
       <div class="sidebar-header">
         <h4>Nội dung trong trang</h4>
       </div>
       <nz-anchor [nzAffix]="false" [nzShowInkInFixed]="false">
-        <!-- Các anchor link -->
+    <nz-link nzHref="#step-1" nzTitle=" Select Component"></nz-link>
+
       </nz-anchor>
     </div>
   </div>

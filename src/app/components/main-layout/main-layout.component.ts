@@ -59,7 +59,14 @@ export class MainLayoutComponent implements OnInit {
     const currentUrl = this.router.url;
 
     // Hiển thị footer navigation cho các trang có navigation flow
-    if (currentUrl.includes('/miniapp-workflow/') || currentUrl.includes('/design-standards/') || currentUrl.includes('/development-guide/') || currentUrl.includes('/development-docs/')) {
+    if (
+      currentUrl.includes('/miniapp-workflow/') ||
+      currentUrl.includes('/design-standards/') ||
+      currentUrl.includes('/development-guide/') ||
+      currentUrl.includes('/development-docs/') ||
+      currentUrl.includes('/ui-guide/') ||
+      currentUrl.includes('/policies/')
+    ) {
       const pageName = this.getPageNameFromUrl(currentUrl);
       this.navigationFlow = this.navigationFlowService.getNavigationFlow(pageName);
       this.showFooterNavigation = !!this.navigationFlow;
